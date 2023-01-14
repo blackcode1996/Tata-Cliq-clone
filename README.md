@@ -12,5 +12,5 @@ All collaborators list with their profile link.
 | ------ | ------ |
 | Aniket Parmar | <https://github.com/aniketparmar29> |
 | Ranbir Singh | <https://github.com/sranbir392> |
+| Sajan Kumar | - <https://github.com/sajan1789> |
 | Shivam Dubey | - |
-| Sajan Kumar | - |
