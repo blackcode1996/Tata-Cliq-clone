@@ -15,3 +15,14 @@ All collaborators list with their profile link.
 | Sajan Kumar |  <https://github.com/sajan1789> | HomePage & Login |
 | Shivam Dubey |  <https://github.com/Shivam00002> |  |
 | Aakash Mukherjee | <https://github.com/blackcode1996> | Product Page & single Product Page |
+
+
+### Fuctionality worked on-
+
+| Team members | Functionality |
+| ------ | ------ |
+| Aniket Parmar | Backend |
+| Ranbir Singh | Navbar,Footer,Cart & WishList |
+| Sajan Kumar | HomePage & Login |
+| Shivam Dubey | Single Product Page |
+| Aakash Mukherjee | Product Page |
