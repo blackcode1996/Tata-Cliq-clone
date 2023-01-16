@@ -28,4 +28,12 @@ All collaborators list with their profile link.
 | Aakash Mukherjee | Product Page |
 
 
-#API[https://atatclickdatabase.vercel.app/]
+###API 
+Link-https://atatclickdatabase.vercel.app/
+
+#Resources
+/clothing 
+/Gagets 
+To access and modify resources, you can use any HTTP method:
+
+GET POST PUT PATCH DELETE OPTIONS
