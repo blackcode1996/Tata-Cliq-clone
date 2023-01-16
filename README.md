@@ -31,9 +31,9 @@ All collaborators list with their profile link.
 ### API- 
 Link-https://atatclickdatabase.vercel.app/
 
-#Resources
-/clothing 
-/Gagets 
+Resources
+1) /clothing 
+2) /Gagets 
 To access and modify resources, you can use any HTTP method:
 
 GET POST PUT PATCH DELETE OPTIONS
