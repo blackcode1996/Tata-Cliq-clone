@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+.slide1{
+    width: 100%;
+    height: 400px;
+    margin: auto;
+   
+}
+.slick-arrow.slick-prev,.slick-arrow.slick-next{
+    background-color:rgb(185, 177, 177);
+    z-index: 1; 
+    height: 30px; 
+    width: 30px;
+    border-radius: 50%;
+}
+.slick-arrow.slick-next{
+    margin-right: 70px;
+}
+.slick-arrow.slick-prev{
+    margin-left: 60px;
+}
+.cat-img{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    margin-top: -4px;
+
+}
+.cat-img >img{
+   width: 100%;
+}
+.payment-method{
+    display: grid;
+    width: 65%;
+    grid-template-columns: repeat(2,1fr);
+    margin: auto;
+    margin-top: 35px;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+.payment-method >img{
+    border: 1.5px solid white;
+    border-radius: 4px;
+}
+.banner{
+    display: flex;
+    width: 85%;
+    justify-content: center;
+    margin: auto;
+    
+}
+.banner >img{
+    border-radius: 5px;
+    width: 90%;
+    height: 150px;
+}
+.card{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: auto;
+    justify-content: space-evenly;
+      width: 75%;
+      margin-top: 70px;
+      gap: 20px;
+}
+.card> img{
+ width: 100%;
+ height: 325px;
+ border-radius: 3px;
+ transform: scale(1);
+ transition: 0.3s ease-in-out;
+}
+.card> img:hover{
+    transform: scale(1.05);
+}
