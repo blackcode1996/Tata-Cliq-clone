@@ -1,4 +1,16 @@
-
-export const Get_Product_Request = "Get_Product_Request";
-export const Get_Product_Success = "Get_Product_Success";
-export const Get_Product_Failure = "Get_Product_Failure";
+//For Gate Product
+export const GET_PRODUCT_REQUEST = "GET_PRODUCT_REQUEST";
+export const GET_PRODUCT_SUCCESS = "GET_PRODUCT_SUCCESS";
+export const GET_PRODUCT_FAILURE = "GET_PRODUCT_FAILURE";
+//For Add Product
+export const ADD_PRODUCT_REQUEST = "ADD_PRODUCT_REQUEST";
+export const ADD_PRODUCT_SUCCESS = "ADD_PRODUCT_SUCCESS";
+export const ADD_PRODUCT_FAILURE = "ADD_PRODUCT_FAILURE";
+// For Edition the Product
+export const EDIT_PRODUCT_REQUEST = "EDIT_PRODUCT_REQUEST";
+export const EDIT_PRODUCT_SUCCESS = "EDIT_PRODUCT_SUCCESS";
+export const EDIT_PRODUCT_FAILURE = "EDIT_PRODUCT_FAILURE";
+// For Delete Product
+export const DELETE_PRODUCT_REQUEST = "DELETE_PRODUCT_REQUEST";
+export const DELETE_PRODUCT_SUCCESS = "DELETE_PRODUCT_SUCCESS";
+export const DELETE_PRODUCT_FAILURE = "DELETE_PRODUCT_FAILURE";
