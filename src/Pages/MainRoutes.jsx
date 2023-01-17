@@ -7,7 +7,7 @@ import { HomePage } from './HomePage'
 import { Login } from './Login'
 import { ProductList } from './ProductList'
 import { SingleProduct } from './SingleProduct'
-
+import {Admin} from '../Admin/Pages/Admin'
 export const MainRoutes = () => {
   return (
     <Routes>
@@ -33,6 +33,7 @@ export const MainRoutes = () => {
         </ReqAuth>}>
         </Route>
         <Route path="*">{<div>Page Not Found</div>}</Route>
+        <Route path='/admin' element={<Admin/>}></Route>
     </Routes>
   )
 }
