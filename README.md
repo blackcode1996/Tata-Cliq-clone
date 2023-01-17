@@ -34,7 +34,7 @@ Link-https://atatclickdatabase.vercel.app/
 Resources
 1) /clothing 
 2) /Gagets 
-
+3) /users
 
 To access and modify resources, you can use any HTTP method:
 
