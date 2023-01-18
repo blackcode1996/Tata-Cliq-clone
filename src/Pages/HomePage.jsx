@@ -27,11 +27,13 @@ const HomePage = () => {
         <Slider {...settings1}>
           {carousel.map((item) => (
             <div key={item.id}>
+             
               <img className="slide1" src={item.img} alt=""  />
               
             </div> 
           ))}
         </Slider>
+  
       </div>
       <div>
         <div className='cat-img'>
