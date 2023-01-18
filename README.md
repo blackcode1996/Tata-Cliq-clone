@@ -22,9 +22,9 @@ All collaborators list with their profile link.
 | Team members | Functionality |
 | ------ | ------ |
 | Aniket Parmar | Backend |
-| Ranbir Singh | Navbar,Footer,Cart & WishList |
+| Ranbir Singh | Footer,Cart & WishList |
 | Sajan Kumar | HomePage & Login |
-| Shivam Dubey | Single Product Page |
+| Shivam Dubey | Single Product Page & Navbar |
 | Aakash Mukherjee | Product Page |
 
 
