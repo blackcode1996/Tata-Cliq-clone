@@ -66,13 +66,22 @@
       margin-top: 70px;
       gap: 20px;
 }
-.card> img{
+.card> img,.child-card> img{
  width: 100%;
  height: 325px;
  border-radius: 3px;
  transform: scale(1);
  transition: 0.3s ease-in-out;
 }
-.card> img:hover{
+.card> img:hover,.child-card:hover> img:hover{
     transform: scale(1.05);
+}
+.child-card{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: auto;
+    justify-content: space-evenly;
+      width: 75%;
+      margin-top: 70px;
+      gap: 20px;
 }
