@@ -1,4 +1,4 @@
 
-export const Get_Product_Request = "Get_Product_Request";
-export const Get_Product_Success = "Get_Product_Success";
-export const Get_Product_Failure = "Get_Product_Failure";
+export const GET_PRODUCT_REQUEST = "GET_PRODUCT_REQUEST";
+export const GET_PRODUCT_SUCCESS = "GET_PRODUCT_SUCCESS";
+export const GET_PRODUCT_FAILURE = "GET_PRODUCT_FAILURE";

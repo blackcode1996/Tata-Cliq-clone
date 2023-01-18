@@ -1,13 +1,8 @@
 
-import {
-    Get_Product_Failure,
-    Get_Product_Request,
-    Get_Product_Success,
-
-} from "./actionTypes";
+import {GET_PRODUCT_FAILURE,GET_PRODUCT_REQUEST,GET_PRODUCT_SUCCESS} from "./actionTypes";
 
 const initialState = {
-    data: [],
+    clothing: [],
     isLoading:false,
     isError:false,
 }
@@ -17,22 +12,21 @@ const reducer = (state = initialState, action) => {
 
     const { type, payload } = action;
     switch (type) {
-        case Get_Product_Request: {
+        case GET_PRODUCT_REQUEST: {
             return {
                 ...state,
                 isLoading: true
             }
         }
-
-        case Get_Product_Success: {
+        case GET_PRODUCT_SUCCESS: {
             return {
                 ...state,
-                data: payload,
+                clothing: payload,
                 isLoading: false
             }
         }
 
-        case Get_Product_Failure: {
+        case GET_PRODUCT_FAILURE: {
             return {
                 ...state,
                 isError: true,
