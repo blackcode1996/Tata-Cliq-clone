@@ -7,7 +7,7 @@ import "./Home.css"
 const HomePage = () => {
     const settings1 = {
         infinite: true,
-        dots: true,
+        dots: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         lazyLoad: true,
@@ -51,7 +51,7 @@ const HomePage = () => {
           <img src="https://assets.tatacliq.com/medias/sys_master/images/45519822880798.jpg" alt="" />
           <img src="https://assets.tatacliq.com/medias/sys_master/images/45519822913566.jpg" alt="" />
           <img src="https://assets.tatacliq.com/medias/sys_master/images/45519822979102.jpg" alt="" />
-          <img src="https://assets.tatacliq.com/medias/sys_master/images/45519823011870.jpg" alt="" />
+          <img src="https://assets.tatacliq.com/medias/sys_master/images/45519823011870.jpg" alt="" className='last'/>
           
         </div>
         <div className='payment-method'>
