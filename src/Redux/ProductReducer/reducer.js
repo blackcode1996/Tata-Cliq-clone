@@ -1,55 +1,43 @@
-import * as types from "./actionTypes";
+
+import {GET_PRODUCT_FAILURE,GET_PRODUCT_REQUEST,GET_PRODUCT_SUCCESS} from "./actionTypes";
 
 const initialState = {
-  data: [],
-  isLoading: false,
-  isError: false,
-};
+    clothing: [],
+    isLoading:false,
+    isError:false,
+}
 
-const reducer = (state = initialState, {type ,payload}) => {
-  switch(type){
 
-    //Get
-   case types.GET_PRODUCT_REQUEST:
-    return {...state, isLoading:true,};
-    case types.GET_PRODUCT_SUCCESS:
-        return {...state, isLoading: false, data:payload};
-     case types.GET_PRODUCT_FAILURE:
-     return {...state , isLoading:false, isError:true};   
+const reducer = (state = initialState, action) => {
 
-     //Add
-     case types.ADD_PRODUCT_REQUEST:
-        return {...state, isLoading:true,};
-     case types.ADD_PRODUCT_SUCCESS:
-        return {...state, data : [...state,payload],
-     
-        isLoading:false};
-     case types.ADD_PRODUCT_FAILURE:
-        return {...state,isLoading:false, isError:true}   
+    const { type, payload } = action;
+    switch (type) {
+        case GET_PRODUCT_REQUEST: {
+            return {
+                ...state,
+                isLoading: true
+            }
+        }
+        case GET_PRODUCT_SUCCESS: {
+            return {
+                ...state,
+                clothing: payload,
+                isLoading: false
+            }
+        }
 
-   //Edit
-   case types.EDIT_PRODUCT_REQUEST:
-    return {...state, isLoading:true,};
-    case types.EDIT_PRODUCT_SUCCESS:
-    let upDatedProduct = state.data.map((el)=>el.id===payload.id ? payload :el)
-     return {...state, isLoading:false ,data: upDatedProduct};
-     case types.EDIT_PRODUCT_FAILURE:
-      return {...state , isLoading:false, isError:true}  
+        case GET_PRODUCT_FAILURE: {
+            return {
+                ...state,
+                isError: true,
+                isLoading: false
+            }
+        }
 
-    //Delete
-    case types.DELETE_PRODUCT_REQUEST:
-      return {...state, isLoading:true};
-     case types.DELETE_PRODUCT_SUCCESS:
-    let upDatednew = state.data.filter((el)=>el.id !== payload)
-    return {...state , isLoading:false, data:upDatednew}
-    case types.DELETE_PRODUCT_FAILURE:
-        return {...state, isLoading:false , isError:true};
-  
-    default:
-        return state;
-  }
-};
+        default: return state;
+    }
 
-export { reducer };
+}
 
+export { reducer }
 
