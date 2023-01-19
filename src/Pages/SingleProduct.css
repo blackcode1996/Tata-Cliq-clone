@@ -1,0 +1,56 @@
+.main{
+   display: flex;
+   border: 1px solid red;
+   width : 100%;
+   padding: 10px 5px ;
+}
+.child{
+    width: 45%;
+    height: 680px;
+    padding: 15px 7px;
+    border: 1px solid green;
+    
+}
+.child2{
+  width: 55%;
+  border: 1px solid green;
+}
+.child img{
+   margin: auto;
+   width: 100%;
+   height: 100%;
+}
+.imgbox{
+    width: 75%;
+    height: 550px;
+    border: 1px solid green;
+}
+.small_img_flex{
+    width:70%;
+    gap: 7px;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 10px;
+    border: 1px solid red;
+
+}
+.small_img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+    margin :auto;
+}
+.rightarrow{
+    margin-top: 285px;
+  margin-right: 15px;
+}
+.rightarrow:hover{
+    color: orangered;
+}
+.leftarrow{
+    margin-top: 285px;
+  margin-left: 15px;
+}
+.leftarrow:hover{
+    color: orangered;
+}
