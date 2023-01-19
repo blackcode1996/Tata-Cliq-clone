@@ -40,10 +40,12 @@
     margin-top: 35px;
     justify-content: space-around;
     margin-bottom: 50px;
+    gap: 30px;
 }
 .payment-method >img{
     border: 1.5px solid white;
     border-radius: 4px;
+    width: 100%;
 }
 .banner{
     display: flex;
@@ -66,13 +68,65 @@
       margin-top: 70px;
       gap: 20px;
 }
-.card> img{
+.card> img,.child-card> img{
  width: 100%;
  height: 325px;
  border-radius: 3px;
  transform: scale(1);
  transition: 0.3s ease-in-out;
 }
-.card> img:hover{
+.card> img:hover,.child-card:hover> img:hover{
     transform: scale(1.05);
+}
+.child-card{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: auto;
+    justify-content: space-evenly;
+      width: 75%;
+      margin-top: 70px;
+      gap: 20px;
+}
+@media (min-width:769px)  and (max-width:1000px){
+    .cat-img{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        margin-top: -4px;
+        
+    }
+    .cat-img >img{
+        width: 70%;
+     }
+     .card{
+        grid-template-columns: repeat(2,1fr); 
+     }
+    
+}
+@media (max-width:768px) {
+    .cat-img{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin :auto;
+        margin-top: -4px;
+        width: 70%;
+        
+    }
+    .last{
+        display: none;
+    }
+    .cat-img >img{
+        width: 70%;
+     }
+     .payment-method{
+        display: grid;
+    
+        grid-template-columns: repeat(1,1fr);
+        width: 80%;
+        gap: 20px;
+        
+     }
+     .card{
+        grid-template-columns: repeat(1,1fr); 
+          width:60%;
+     }
 }
