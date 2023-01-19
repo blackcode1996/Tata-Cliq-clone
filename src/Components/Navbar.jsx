@@ -66,11 +66,6 @@ export const Navbar = () => {
     document.getElementById("right_lower_box_third_input_box_id").value = targ;
   }
   return (
-<<<<<<< HEAD
-    <div>Navbar</div>
-  )
-}
-=======
     <>
       <div id="main_navbar">
         <div id="navbar_left_box">
@@ -1045,4 +1040,3 @@ export const Navbar = () => {
     </>
   );
 };
->>>>>>> c5b12daf9980f8f600a3ee3f535d5c4586d29423

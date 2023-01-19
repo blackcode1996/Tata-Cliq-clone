@@ -16,7 +16,6 @@ import { useState } from 'react';
 
 function Rating({ rating }) {
 
-    let numReviews=2;
 
     return (
       <Box display="flex" alignItems="center">

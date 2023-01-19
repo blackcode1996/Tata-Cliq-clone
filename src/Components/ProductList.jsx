@@ -10,7 +10,7 @@ const ProductList = () => {
 
     const products=useSelector((store)=>store.ProductReducer.clothing)
 
-
+    
     useEffect(()=>{
         dispatch(getProducts)
     },[])
@@ -20,7 +20,6 @@ const ProductList = () => {
         {products.length>0 && products.map((el)=>{
             return <ProductCard key={el.id} product={el}/>
         })}
-
     </DivWrapper>
   )
 }
