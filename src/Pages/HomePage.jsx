@@ -56,7 +56,7 @@ const HomePage = () => {
         </div>
         <div className='payment-method'>
           <img src="https://assets.tatacliq.com/medias/sys_master/images/45103367290910.jpg" alt="" />
-          <img src="https://assets.tatacliq.com/medias/sys_master/images/45433290981406.jpg" alt="" />
+          <img src="https://assets.tatacliq.com/medias/sys_master/images/45433290981406.jpg" alt="" />          
         </div>
         <div className="banner">
           <img src="https://assets.tatacliq.com/medias/sys_master/images/45536787398686.jpg" alt="" />
