@@ -15,14 +15,14 @@ export const Team = ({isDarkMode}) => {
         {team.map(({ id, name, Profile,Github,linkedin,Role,Responsebility }) => (
             <div
               key={id}
-              className={`shadow-lg  duration-300 p-3 rounded-lg flex-col   ${isDarkMode===true?"shadow-blue-400":"shadow-blue-900"} ` }  
+              className={`shadow-lg  duration-300 p-3 rounded-lg flex-col   ${isDarkMode===true?"shadow-blue-400":"shadow-blue-900"} hover:scale-110` }  
             >
               <img src={Profile} alt="" className="w-20 mx-auto" />
               <p className="mt-4">{name}</p>
               <p>Role: {Role}</p>
               <div className='flex justify-around '>
-                <a className='text-2xl'  href={linkedin}><FaLinkedin/></a>
-                <a className='text-2xl' href={Github}><FaGithub/></a>
+                <a className='text-2xl' target={"_blank"} rel="noreferrer"  href={linkedin}><FaLinkedin/></a>
+                <a className='text-2xl' target={"_blank"} rel="noreferrer" href={Github}><FaGithub/></a>
               </div>
             </div>
           ))}
