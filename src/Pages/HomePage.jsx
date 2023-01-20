@@ -1,5 +1,6 @@
 import React from 'react'
-
+import {Navbar} from '../Components/Navbar'
+import {Footer} from '../Components/Footer'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
@@ -31,7 +32,10 @@ const HomePage = () => {
                    {id:6,img:"https://assets.tatacliq.com/medias/sys_master/images/45513137061918.jpg"}
                  ]             
   return (
+    <>
+    <Navbar/>
     <div  style={{background:"rgb(236,236,236)"}}>
+
         <div style={{ width: "100%"}}>
         <Slider {...settings1}>
           {carousel.map((item) => (
@@ -193,6 +197,8 @@ const HomePage = () => {
       </div>
       </div>
     </div>
+    <Footer/>
+    </>
   )
 }
 
