@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Wishlist.module.css";
+import {Navbar} from '../Components/Navbar'
+import {Footer} from '../Components/Footer'
 export const Wishlist = () => {
   const [wishData, setWishData] = useState([]);
   useEffect(() => {});
   return (
+    <>
+    <Navbar/>
     <div>
       <div id="section_A" className={styles.sectionA}>
         <div id="sidebar_1A" className={styles.sidebar1A}>
@@ -124,5 +128,7 @@ export const Wishlist = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
