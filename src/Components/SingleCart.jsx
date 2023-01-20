@@ -7,10 +7,15 @@ import ShareIcon from "@mui/icons-material/Share";
 import FavoriteBorderSharpIcon from "@mui/icons-material/FavoriteBorderSharp";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import LargeWithLogoLeft from "./bottom";
-const SingleCart = ({ item }) => {
-  // console.log("images",item.category)
 
-  const [curimg, setImg] = useState();
+const SingleCart = ({data}) => { 
+ console.log("my",data)
+
+console.log("img",data.images[0])
+
+const [curimg, setImg] = useState({})  
+    
+
 
   return (
     <>

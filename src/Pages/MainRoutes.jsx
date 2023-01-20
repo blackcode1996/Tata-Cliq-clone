@@ -1,6 +1,5 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-// import { ReqAuth } from '../Components/ReqAuth'
 import { Cart } from './Cart'
 import { Checkout } from './Checkout'
 import  HomePage  from './HomePage'
@@ -15,7 +14,7 @@ export const MainRoutes = () => {
         <Route path='/' element={<HomePage/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/products" element={<ProductListPage/>}></Route>
-        <Route path="/products:id" element={<SingleProduct/>}></Route>
+        <Route path="/products/:id" element={<SingleProduct/>}></Route>
         <Route path="/checkout"  element={<Checkout/>}></Route>
         <Route path="/cart"  element={<Cart/>}></Route>
         <Route path="*" element={<Pagenotfound/>}></Route>

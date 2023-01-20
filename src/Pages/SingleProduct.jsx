@@ -1,23 +1,35 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import SingleCart from "../Components/SingleCart";
-import { getProducts } from "../Redux/ProductReducer/action";
+import {useParams} from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
 
 export const SingleProduct = () => {
-  const dispatch = useDispatch();
-  const products = useSelector((store) => store.ProductReducer.clothing);
+   const [data , setData] = useState({})
+   const param = useParams();
 
-  useEffect(() => {
-    dispatch(getProducts);
-  }, []);
+  console.log("userId",param)
+  
+  
+  const getSingleProduct=(id)=>{
+    return axios.get(`https://wadrobe.onrender.com/men/${id}`)
+  }
+
+
+useEffect(()=>{
+  getSingleProduct(param.id).then((res)=>{
+    // console.log(res.data)
+    setData(res.data)
+  })
+ 
+},[])
+  
+  //console.log(data)
 
   return (
     <>
-      {products.length > 0 &&
-        products.map((el, index) => {
-          return <SingleCart key={index * 5} item={el} />;
-        })}
+     <SingleCart  data={data}/>
     </>
   );
 };

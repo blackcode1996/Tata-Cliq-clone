@@ -16,7 +16,7 @@ const getProductFailureAction=()=>{
 export const getProducts=(dispatch)=>{
     dispatch(getProductRequestAction())
 
-    axios.get("https://atatclickdatabase.vercel.app/clothing").then((res)=>{
+    axios.get("https://wadrobe.onrender.com/men").then((res)=>{
         dispatch(getProductSuccesAction(res.data))
     }).catch((err)=>{
         dispatch(getProductFailureAction())
