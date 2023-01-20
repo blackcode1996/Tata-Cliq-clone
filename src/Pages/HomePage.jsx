@@ -4,7 +4,9 @@ import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 import "./Home.css"
+import { useAuth0 } from "@auth0/auth0-react";
 const HomePage = () => {
+  const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0(); 
     const settings1 = {
         infinite: true,
         dots: false,
