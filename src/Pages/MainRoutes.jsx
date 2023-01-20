@@ -9,6 +9,7 @@ import { ProductListPage } from './ProductListPage'
 import { SingleProduct } from './SingleProduct'
 import {Admin} from '../Admin/Pages/Admin'
 import Pagenotfound from './Pagenotfound'
+import EditUser from '../Admin/Components/Users/EditUser'
 export const MainRoutes = () => {
   return (
     <Routes>
@@ -20,6 +21,7 @@ export const MainRoutes = () => {
         <Route path="/cart"  element={<Cart/>}></Route>
         <Route path="*" element={<Pagenotfound/>}></Route>
         <Route path='/admin' element={<Admin/>}></Route>
+        <Route path="/admin/edit/:id" element={<EditUser />}></Route>
     </Routes>
   )
 }
