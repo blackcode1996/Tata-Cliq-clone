@@ -4,19 +4,28 @@ import { getProducts } from "../Redux/ProductReducer/action";
 import { ProductCard } from "./ProductCard";
 import styled from "styled-components";
 import Sort from "./Sort";
+import { useLocation, useSearchParams } from "react-router-dom";
 
 const ProductList = () => {
+
   const dispatch = useDispatch();
 
   const products = useSelector((store) => store.ProductReducer.clothing);
 
-  
+   const location=useLocation();
 
-  // console.log(products)
+   const [searchParams]=useSearchParams();
+
+  console.log(location)
 
   useEffect(() => {
-    dispatch(getProducts);
-  }, []);
+    let paramObj={
+      params:{
+        brand:searchParams.getAll('brand')
+      }
+    }
+    dispatch(getProducts(paramObj));
+  }, [location.search]);
 
   return (
     <>
