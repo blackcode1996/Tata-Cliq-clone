@@ -130,3 +130,11 @@
           width:60%;
      }
 }
+.slider{
+    border-radius: 3px;
+    transform: scale(1);
+    transition: 0.3s ease-in-out; 
+}
+.slider:hover{
+    transform: scale(1.05);
+}

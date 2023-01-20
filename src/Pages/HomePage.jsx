@@ -8,6 +8,7 @@ import "./Home.css"
 import { useAuth0 } from "@auth0/auth0-react";
 const HomePage = () => {
   const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0(); 
+  
     const settings1 = {
         infinite: true,
         dots: false,
@@ -17,6 +18,39 @@ const HomePage = () => {
         autoplay: true,
         autoplaySpeed: 1500,
       };
+      const settings2={
+        
+      infinite: true,
+      speed: 500,
+      slidesToShow: 5,
+      slidesToScroll: 2,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+      }
     const carousel=[{id:1,img:"https://assets.tatacliq.com/medias/sys_master/images/45584593518622.gif"},
                      {id:2,img:"https://assets.tatacliq.com/medias/sys_master/images/45581158809630.jpg"},
                      {id:3,img:"https://assets.tatacliq.com/medias/sys_master/images/45554503090206.jpg"},
@@ -30,7 +64,21 @@ const HomePage = () => {
                    {id:4,img:"https://assets.tatacliq.com/medias/sys_master/images/45513137455134.jpg"},
                    {id:5,img:"https://assets.tatacliq.com/medias/sys_master/images/45513137258526.jpg"},
                    {id:6,img:"https://assets.tatacliq.com/medias/sys_master/images/45513137061918.jpg"}
-                 ]             
+                 ]   
+      const slider=[{id:1,img:"https://assets.tatacliq.com/medias/sys_master/images/45576216608798.jpg"},
+                    {id:2,img:"https://assets.tatacliq.com/medias/sys_master/images/45576216674334.jpg"},
+                    {id:3,img:"https://assets.tatacliq.com/medias/sys_master/images/45576216739870.jpg"},
+                    {id:4,img:"https://assets.tatacliq.com/medias/sys_master/images/45576216805406.jpg"},
+                    {id:5,img:"https://assets.tatacliq.com/medias/sys_master/images/45622605905950.jpg"},
+                    {id:6,img:"https://assets.tatacliq.com/medias/sys_master/images/45622606037022.jpg"},
+                    {id:7,img:"https://assets.tatacliq.com/medias/sys_master/images/45619580305438.jpg"},
+                    {id:8,img:"https://assets.tatacliq.com/medias/sys_master/images/45619580436510.jpg"},
+                    {id:9,img:"https://assets.tatacliq.com/medias/sys_master/images/45536791658526.jpg"},
+                    {id:10,img:"https://assets.tatacliq.com/medias/sys_master/images/45536791789598.jpg"},
+                    {id:11,img:"https://assets.tatacliq.com/medias/sys_master/images/45619571556382.jpg"},
+                    {id:12,img:"https://assets.tatacliq.com/medias/sys_master/images/45619569983518.jpg"}
+                  
+                   ]                 
   return (
     <>
     <Navbar/>
@@ -188,13 +236,18 @@ const HomePage = () => {
       </div>
       <div>
         <img src="https://assets.tatacliq.com/medias/sys_master/images/45461314043934.jpg" alt="" />
-      </div>
-      <div className='card'>
-        <img src="https://assets.tatacliq.com/medias/sys_master/images/45576216608798.jpg" alt="" />
-        <img src="https://assets.tatacliq.com/medias/sys_master/images/45576216674334.jpg" alt="" />
-        <img src="https://assets.tatacliq.com/medias/sys_master/images/45576216739870.jpg" alt="" />
-        <img src="https://assets.tatacliq.com/medias/sys_master/images/45576216805406.jpg" alt="" />
-      </div>
+      </div>    
+      <div style={{  width: "90%",margin:"auto"}}>
+        <Slider {...settings2}>
+          {slider.map((item) => (
+            <div key={item.id} className="slider">
+             
+              <img className="slide1" src={item.img} alt=""  />
+              
+            </div>    
+          ))}
+        </Slider>
+        </div>
       </div>
     </div>
     <Footer/>
