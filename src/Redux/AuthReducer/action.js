@@ -1,4 +1,4 @@
-import { GET_USERS_FAILURE, GET_USERS_REQUEST, GET_USERS_SUCCESS } from "./actionTypes"
+import { GET_USERS_FAILURE, GET_USERS_REQUEST, GET_USERS_SUCCESS,Add_User,Delete_User,Update_User } from "./actionTypes"
 import axios from "axios";
 
 const getUSERSRequestAction=()=>{
@@ -21,4 +21,35 @@ export const getUSERSs=(dispatch)=>{
     }).catch((err)=>{
         dispatch(getUSERSFailureAction())
     })
+}
+
+export const addUser = (payload) => async (dispatch) => {
+    try {
+        let data = await axios.post(`https://atatclickdatabase.vercel.app/users`, payload)
+        dispatch({ type: Add_User, payload: data.data })
+    } catch (error) {
+       console.log(error)
+    }
+}
+
+
+export const UpdateUser = (id, payload) => async (dispatch) => {
+
+    try {
+        let data = await axios.patch(`https://atatclickdatabase.vercel.app/users/${id}`, payload)
+        dispatch({ type:Update_User, payload: data.data })
+    } catch (error) {
+       console.log(error)
+    }
+}
+
+
+export const DeleteUser= (id) => async (dispatch) => {
+   
+    try {
+        let data = await axios.delete(`https://atatclickdatabase.vercel.app/users/${id}`)
+        dispatch({ type: Delete_User, payload: data.data })
+    } catch (error) {
+       console.log(error)
+    }
 }
