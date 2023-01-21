@@ -8,7 +8,7 @@ import axios from "axios";
 export const SingleProduct = () => {
    const [data , setData] = useState({})
    const param = useParams();
-
+  let x;
   console.log("userId",param)
   
   
