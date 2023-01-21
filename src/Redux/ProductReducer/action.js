@@ -13,10 +13,10 @@ const getProductFailureAction=()=>{
     return{type:GET_PRODUCT_FAILURE}
 }
 
-export const getProducts=(dispatch)=>{
+export const getProducts=(param)=>(dispatch)=>{
     dispatch(getProductRequestAction())
 
-    axios.get("https://atatclickdatabase.vercel.app/clothing").then((res)=>{
+    axios.get("https://wadrobe.onrender.com/men",param).then((res)=>{
         dispatch(getProductSuccesAction(res.data))
     }).catch((err)=>{
         dispatch(getProductFailureAction())

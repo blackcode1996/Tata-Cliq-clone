@@ -1086,4 +1086,4 @@ export const Navbar = () => {
       </div>
     </>
   );
-};
+}

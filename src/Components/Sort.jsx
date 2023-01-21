@@ -1,9 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box, FormControl, FormLabel, Select } from "@chakra-ui/react";
 
 const Sort = () => {
 
-    const [sortBy, setSortBy] = useState("newest");
+  const [sortBy, setSortBy] = useState("newest");
+
+  useEffect(()=>{
+    const params={
+      sortBy
+    }
+    
+  })
+
+  console.log(sortBy)
 
   return (
     <Box display={"flex"} maxW={"20%"} mt={"20px"} mr={"20px"} float={"right"}>
@@ -16,16 +25,10 @@ const Sort = () => {
             border={"1px solid gray"}
           >
             <option value="newest">Newest</option>
-            <option value="price-low-to-high">Price: Low to High</option>
-            <option value="price-high-to-low">Price: High to Low</option>
+            <option value="asc">Price: Low to High</option>
+            <option value="desc">Price: High to Low</option>
           </Select>
         </FormControl>
-        {/* <Box w={"20px"} he={"20px"}>
-            <Box w={""} h={""}></Box>
-            <Box></Box>
-            <Box></Box>
-            <Box></Box>
-        </Box> */}
       </Box>
   )
 }

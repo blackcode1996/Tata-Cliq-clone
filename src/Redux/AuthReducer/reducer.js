@@ -1,6 +1,7 @@
-import {GET_USERS_FAILURE,GET_USERS_REQUEST,GET_USERS_SUCCESS,Add_User,Delete_User,Update_User} from "./actionTypes";
+import {GET_USERS_FAILURE,GET_USERS_REQUEST,GET_USERS_SUCCESS,Add_User,Delete_User,Update_User,GET_PRODUCT_FAILURE,GET_PRODUCT_REQUEST,GET_PRODUCT_SUCCESS,Add_PRODUCT,Update_PRODUCT,Delete_PRODUCT} from "./actionTypes";
 
 const initialState = {
+    pro:[],
     users: [],
     isLoading:false,
     isError:false,
@@ -42,6 +43,38 @@ const reducer = (state = initialState, action) => {
             return{
              ...state,
              users:UserAfterDelete
+            }
+         }
+        case GET_PRODUCT_REQUEST: {
+            return { ...state,isLoading: true}
+        }
+        case GET_PRODUCT_SUCCESS: {
+            return {...state,pro: payload,isLoading: false}
+        }
+        case GET_PRODUCT_FAILURE: {
+            return {...state,isError: true,isLoading: false}
+        }
+        case Add_PRODUCT: {
+
+            return {
+                ...state,
+                pro: [...state.pro, payload]
+            }
+        }
+
+        case Update_PRODUCT:{
+            let Newprodata= state.pro.map((pr) => pr.id === payload.id ? payload : pr);
+            return{
+                ...state,
+                pro:Newprodata
+            }
+        }
+   
+         case Delete_PRODUCT:{
+            let PRoAfterDelete = state.pro.filter((pr) => pr.id !== payload.id);
+            return{
+             ...state,
+             users:PRoAfterDelete
             }
          }
          
