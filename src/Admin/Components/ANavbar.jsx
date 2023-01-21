@@ -40,19 +40,19 @@ function ANavbar({isDarkMode,toggleDarkMode}) {
 
             </div>
             <ul style={isDarkMode===true?{backgroundColor:"#001124",color:"white"}:{backgroundColor:"#0279f7",color:"black"}} className='hidden menui px-2 py-4 space-x-11 justify-end sm:flex  xl:flex 2xl:flex  md:flex'>
-                <li className='hover:underline hover:text-blue-900 hover:underline-offset-8 menui1 cursor-pointer'><Link to="Home" smooth duration={1500}>Home</Link></li>
-                <li className='hover:underline hover:text-blue-900 hover:underline-offset-8 cursor-pointer'><Link to="users" smooth duration={1500}>Users</Link></li>
-                <li className='hover:underline hover:text-blue-900 hover:underline-offset-8 cursor-pointer'><Link to="product" smooth duration={1500}>Products</Link></li>
-                <li className='hover:underline hover:text-blue-900 hover:underline-offset-8 cursor-pointer'><Link to="team" smooth duration={1500}>Team</Link></li>
+                <li className='hover:underline hover:text-blue-900 hover:underline-offset-8 menui1 cursor-pointer'><Link to="/admin">Home</Link></li>
+                <li className='hover:underline hover:text-blue-900 hover:underline-offset-8 cursor-pointer'><Link to="/admin/users">Users</Link></li>
+                <li className='hover:underline hover:text-blue-900 hover:underline-offset-8 cursor-pointer'><Link to="/admin/product">Products</Link></li>
+                <li className='hover:underline hover:text-blue-900 hover:underline-offset-8 cursor-pointer'><Link to="team">Team</Link></li>
                 <li><Switch toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode}/></li>
         </ul>
       </nav>
       <ul style={isDarkMode===true?{backgroundColor:"#001124",color:"white"}:{backgroundColor:"#0279f7",color:"black"}}  className=" hidden  menuiji px-2 py-4 space-x-11 justify-end  xl:hidden   md:hidden">
                 <li><Switch toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode}/></li>
-                <li className='hover:underline hover:text-blue-900 hover:underline-offset-8 menui1 cursor-pointer'><Link to="Home" smooth duration={1500}>Home</Link></li>
-                <li className='hover:underline hover:text-blue-900 hover:underline-offset-8 cursor-pointer'><Link to="users" smooth duration={1500}>Users</Link></li>
-                <li className='hover:underline hover:text-blue-900 hover:underline-offset-8 cursor-pointer'><Link to="product" smooth duration={1500}>Products</Link></li>
-                <li className='hover:underline hover:text-blue-900 hover:underline-offset-8 cursor-pointer'><Link to="team" smooth duration={1500}>Team</Link></li>
+                <li className='hover:underline hover:text-blue-900 hover:underline-offset-8 menui1 cursor-pointer'><Link to="/admin">Home</Link></li>
+                <li className='hover:underline hover:text-blue-900 hover:underline-offset-8 cursor-pointer'><Link to="/admin/users">Users</Link></li>
+                <li className='hover:underline hover:text-blue-900 hover:underline-offset-8 cursor-pointer'><Link to="/admin/product">Products</Link></li>
+                <li className='hover:underline hover:text-blue-900 hover:underline-offset-8 cursor-pointer'><Link to="team">Team</Link></li>
             </ul>
       <hr />
     </div>
