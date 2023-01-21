@@ -8,7 +8,7 @@ import { faFolder } from "@fortawesome/free-regular-svg-icons";
 import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import { useToast } from '@chakra-ui/react'
+import { useToast } from "@chakra-ui/react";
 import {
   Menu,
   MenuButton,
@@ -25,7 +25,7 @@ import { IconButton } from "@chakra-ui/react";
 import "./Navbar.css";
 
 export const Navbar = () => {
-  const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0(); 
+  const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
   const [current, setcurrent] = useState(false);
   const [text, setText] = useState("");
   let navigate = useNavigate();
@@ -50,7 +50,7 @@ export const Navbar = () => {
     "eyewear",
     "Men's Clothing",
   ];
-  const toast = useToast()
+  const toast = useToast();
   function handinginputbox() {
     if (text.length > 1) {
       setcurrent(true);
@@ -68,20 +68,18 @@ export const Navbar = () => {
   function clickoninputdrop(targ) {
     document.getElementById("right_lower_box_third_input_box_id").value = targ;
   }
-  
-  
-    if(isAuthenticated){
-      toast({
-        title: 'Account created.',
-        description: "We've created your account for you.",
-        status: 'success',
-        duration: 1000,
-        isClosable: true,
-      })
-     
-    }
-  console.log(user)
-  console.log(window.location.origin)
+
+  if (isAuthenticated) {
+    toast({
+      title: "Account created.",
+      description: "We've created your account for you.",
+      status: "success",
+      duration: 1000,
+      isClosable: true,
+    });
+  }
+  console.log(user);
+  console.log(window.location.origin);
   return (
     <>
       <div id="main_navbar">
@@ -138,16 +136,41 @@ export const Navbar = () => {
               <div>
                 <h1 className="upper_boxof_navbar_h1">Gift Card</h1>
               </div>
-            
-             
-                
-              {isAuthenticated&& <div style={{margin:"auto",marginLeft:"10px"}}><img src={user.picture} alt="logo" style={{backgroundColor:"white",borderRadius:"50%",width:"25%"}}/></div>}
-              <div>
-                <Link >
-                  {" "}
-                 {isAuthenticated ? <h1 className="upper_boxof_navbar_h1" onClick={() => logout({ returnTo: window.location.origin })}>Loout</h1>:<h1 className="upper_boxof_navbar_h1" onClick={() => loginWithRedirect()}>Login</h1>}
-                </Link>
 
+              {isAuthenticated && (
+                <div style={{ margin: "auto", marginLeft: "10px" }}>
+                  <img
+                    src={user.picture}
+                    alt="logo"
+                    style={{
+                      backgroundColor: "white",
+                      borderRadius: "50%",
+                      width: "25%",
+                    }}
+                  />
+                </div>
+              )}
+              <div>
+                <Link>
+                  {" "}
+                  {isAuthenticated ? (
+                    <h1
+                      className="upper_boxof_navbar_h1"
+                      onClick={() =>
+                        logout({ returnTo: window.location.origin })
+                      }
+                    >
+                      Loout
+                    </h1>
+                  ) : (
+                    <h1
+                      className="upper_boxof_navbar_h1"
+                      onClick={() => loginWithRedirect()}
+                    >
+                      Login
+                    </h1>
+                  )}
+                </Link>
               </div>
               <div>
                 <Link to="/admin">
@@ -1040,11 +1063,13 @@ export const Navbar = () => {
             </div>
             <div className="fourth_lower_box">
               <div>
-                <div>
-                  <h1 className="icon_heart">
-                    <FontAwesomeIcon icon={faHeart} />
-                  </h1>
-                </div>
+                <Link to="/Wishlist">
+                  <div>
+                    <h1 className="icon_heart">
+                      <FontAwesomeIcon icon={faHeart} />
+                    </h1>
+                  </div>
+                </Link>
               </div>
               <div>
                 <Link to="/cart">
@@ -1061,5 +1086,4 @@ export const Navbar = () => {
       </div>
     </>
   );
-
-              }
+}
