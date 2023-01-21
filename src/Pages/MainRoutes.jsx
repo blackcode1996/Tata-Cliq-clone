@@ -10,6 +10,7 @@ import { SingleProduct } from './SingleProduct'
 import {Admin} from '../Admin/Pages/Admin'
 import Pagenotfound from './Pagenotfound'
 import EditUser from '../Admin/Components/Users/EditUser'
+import EditProduct from '../Admin/Components/Product/EditProduct';
 export const MainRoutes = () => {
   return (
     <Routes>
@@ -22,6 +23,7 @@ export const MainRoutes = () => {
         <Route path="*" element={<Pagenotfound/>}></Route>
         <Route path='/admin' element={<Admin/>}></Route>
         <Route path="/admin/edit/:id" element={<EditUser />}></Route>
+        <Route path="/admin/upadte/:id" element={<EditProduct />}></Route>
     </Routes>
   )
 }
