@@ -9,9 +9,9 @@ const PRotable = ({isDarkMode,}) => {
   const pro = useSelector((store) => store.AuthReducer.pro);
     console.log(pro)
   
-  useEffect(() => {
-      dispatch(getpro);
-    }, [pro]);
+    useEffect(() => {
+        dispatch(getpro);
+      }, [dispatch]);
   return (
     <>
         <div className="flex flex-col mt-8">
