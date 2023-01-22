@@ -77,6 +77,54 @@ const Sidebar = () => {
                 <AccordionPanel pb={4} onChange={handleFilter} >
                  <Checkbox value={"H&M"} defaultChecked={brand.includes("H&M")}>H&M</Checkbox>
                 </AccordionPanel>
+                <AccordionPanel pb={4} onChange={handleFilter} >
+                 <Checkbox value={"The Indian Garage Co"} defaultChecked={brand.includes("The Indian Garage Co")}>The Indian Garage Co</Checkbox>
+                </AccordionPanel>
+                <AccordionPanel pb={4} onChange={handleFilter} >
+                 <Checkbox value={"LOCOMOTIVE"} defaultChecked={brand.includes("LOCOMOTIVE")}>Locomotive</Checkbox>
+                </AccordionPanel>
+                <AccordionPanel pb={4} onChange={handleFilter} >
+                 <Checkbox value={"Dennis Lingo"} defaultChecked={brand.includes("Dennis Lingo")}>Dennis Lingo</Checkbox>
+                </AccordionPanel>
+                <AccordionPanel pb={4} onChange={handleFilter} >
+                 <Checkbox value={"HRX by Hrithik Roshan"} defaultChecked={brand.includes("HRX by Hrithik Roshan")}>HRX</Checkbox>
+                </AccordionPanel>
+                <AccordionPanel pb={4} onChange={handleFilter} >
+                 <Checkbox value={"United Colors of Benetton"} defaultChecked={brand.includes("United Colors of Benetton")}>United Colors of Benetton</Checkbox>
+                </AccordionPanel>
+                <AccordionPanel pb={4} onChange={handleFilter} >
+                 <Checkbox value={"IVOC"} defaultChecked={brand.includes("IVOC")}>IVOC</Checkbox>
+                </AccordionPanel>
+                <AccordionPanel pb={4} onChange={handleFilter} >
+                 <Checkbox value={"Mast & Harbour"} defaultChecked={brand.includes("Mast & Harbour")}>Mast & Harbour</Checkbox>
+                </AccordionPanel>
+                <AccordionPanel pb={4} onChange={handleFilter} >
+                 <Checkbox value={"Lee"} defaultChecked={brand.includes("Lee")}>Lee</Checkbox>
+                </AccordionPanel>
+                <AccordionPanel pb={4} onChange={handleFilter} >
+                 <Checkbox value={"DENNISON"} defaultChecked={brand.includes("DENNISON")}>Dennision</Checkbox>
+                </AccordionPanel>
+                <AccordionPanel pb={4} onChange={handleFilter} >
+                 <Checkbox value={"HERE&NOW"} defaultChecked={brand.includes("HERE&NOW")}>Here & Now</Checkbox>
+                </AccordionPanel>
+                <AccordionPanel pb={4} onChange={handleFilter} >
+                 <Checkbox value={"Levis"} defaultChecked={brand.includes("Levis")}>Levis</Checkbox>
+                </AccordionPanel>
+                <AccordionPanel pb={4} onChange={handleFilter} >
+                 <Checkbox value={"WROGN"} defaultChecked={brand.includes("WROGN")}>WROGN</Checkbox>
+                </AccordionPanel>
+                <AccordionPanel pb={4} onChange={handleFilter} >
+                 <Checkbox value={"Urbano Fashion"} defaultChecked={brand.includes("Urbano Fashion")}>Urbano Fashion</Checkbox>
+                </AccordionPanel>
+                <AccordionPanel pb={4} onChange={handleFilter} >
+                 <Checkbox value={"High Star"} defaultChecked={brand.includes("High Star")}>High Star</Checkbox>
+                </AccordionPanel>
+                <AccordionPanel pb={4} onChange={handleFilter} >
+                 <Checkbox value={"KRA"} defaultChecked={brand.includes("KRA")}>KRA</Checkbox>
+                </AccordionPanel>
+                <AccordionPanel pb={4} onChange={handleFilter} >
+                 <Checkbox value={"Blackberrys"} defaultChecked={brand.includes("Blackberrys")}>Blackberrys</Checkbox>
+                </AccordionPanel>
               </>
             )}
           </AccordionItem>
