@@ -5,6 +5,8 @@ import { ProductCard } from "./ProductCard";
 import styled from "styled-components";
 import Sort from "./Sort";
 import { useLocation, useSearchParams } from "react-router-dom";
+import Loading from "./Assests/loading.gif"
+import {Image, Text} from "@chakra-ui/react"
 
 const ProductList = () => {
 
@@ -16,12 +18,15 @@ const ProductList = () => {
 
    const [searchParams]=useSearchParams();
 
-  console.log(location)
 
   useEffect(() => {
+    const order=searchParams.get("order")
     let paramObj={
       params:{
-        brand:searchParams.getAll('brand')
+        brand:searchParams.getAll('brand'),
+        _sort:order && "discounted_price",
+        _order:order
+
       }
     }
     dispatch(getProducts(paramObj));
@@ -31,17 +36,16 @@ const ProductList = () => {
     <>
     <Sort/>
       <DivWrapper>
-        {products.length > 0 &&
-          products.map((el) => {
-            return <ProductCard key={el.id} product={el} />;
-          })}
+        {products && products.length>0 ?products.map((el)=>{
+          return <ProductCard key={el.id} product={el}/>
+        }):<Image src={Loading} marginLeft={"350px"}/>}
       </DivWrapper>
     </>
   );
 };
 
 const DivWrapper = styled.div`
-    margin-top: 100px;
+  margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
   grid-gap: 15px;

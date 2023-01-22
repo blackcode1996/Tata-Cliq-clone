@@ -44,23 +44,24 @@ export const ProductCard = ({ product }) => {
   return (
     <Flex
       p={50}
-      maxH={"600px"}
+      maxH={"full"}
       display={product.images[0] ? "block" : "none"}
-      w="full"
       alignItems="center"
       justifyContent="center"
     >
       <Box
         bg={useColorModeValue("white", "gray.800")}
-        maxW="sm"
+        maxW="full"
         maxH="full"
         h={"550px"}
-        borderWidth="10px"
+        borderWidth="0px"
         rounded="lg"
         shadow="lg"
         position="relative"
       >
-        <Circle size="10px" position="absolute" top={2} right={2} bg="red" />
+        <Circle p={"7px"} position="absolute" top={2} right={2} bg="#52b155">
+          <Text color={"#fff"}>{product.brand}</Text>
+        </Circle>
         <Link to={`/products/${product.id}`}>
           <Image
             w={"full"}
