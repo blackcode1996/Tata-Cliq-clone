@@ -12,7 +12,7 @@ export const ProductListPage = () => {
       <Navbar />
       <div style={{ backgroundColor: "#ececec" }}>
         <MensTextDiv>
-          <Text fontSize='5xl'>Mens Wear</Text>
+          <Text fontSize='3xl'>Mens Wear</Text>
         </MensTextDiv>
         <DivWrapper>
           <FilterWrapper>
