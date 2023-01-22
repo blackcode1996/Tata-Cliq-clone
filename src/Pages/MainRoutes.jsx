@@ -12,6 +12,7 @@ import { Admin } from "../Admin/Pages/Admin";
 import Pagenotfound from "./Pagenotfound";
 import EditUser from "../Admin/Components/Users/EditUser";
 import EditProduct from "../Admin/Components/Product/EditProduct";
+import {Wishlist} from './Wishlist';
 export const MainRoutes = () => {
   return (
     <Routes>
@@ -25,6 +26,7 @@ export const MainRoutes = () => {
       <Route path="/admin" element={<Admin />}></Route>
       <Route path="/admin/edit/:id" element={<EditUser />}></Route>
       <Route path="/admin/upadte/:id" element={<EditProduct />}></Route>
+      <Route path='/wishlist' element={<Wishlist/>}></Route>
     </Routes>
   );
 };

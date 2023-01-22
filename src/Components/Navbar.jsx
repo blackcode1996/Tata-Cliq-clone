@@ -1046,7 +1046,7 @@ export const Navbar = () => {
               <div>
                 <div>
                   <h1 className="icon_heart">
-                    <FontAwesomeIcon icon={faHeart} />
+                    <Link to="/wishlist"><FontAwesomeIcon icon={faHeart} /></Link>
                   </h1>
                 </div>
               </div>
