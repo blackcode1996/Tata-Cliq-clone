@@ -22,11 +22,11 @@ const Sidebar = () => {
 
   const [brand, setBrand] = useState(inittialState||[]);
 
-  
 
   const handleFilter=(e)=>{
 
     let newBrand=[...brand]
+
 
     if(newBrand.includes(e.target.value)){
       newBrand.splice(newBrand.indexOf(e.target.value),1)
@@ -124,6 +124,54 @@ const Sidebar = () => {
                 </AccordionPanel>
                 <AccordionPanel pb={4} onChange={handleFilter} >
                  <Checkbox value={"Blackberrys"} defaultChecked={brand.includes("Blackberrys")}>Blackberrys</Checkbox>
+                </AccordionPanel>
+              </>
+            )}
+          </AccordionItem>
+          <AccordionItem>
+            {({ isExpanded }) => (
+              <>
+                <h2>
+                  <AccordionButton>
+                    <Box as="span" flex="1" textAlign="left">
+                      Type
+                    </Box>
+                    {isExpanded ? (
+                      <MinusIcon fontSize="12px" />
+                    ) : (
+                      <AddIcon fontSize="12px" />
+                    )}
+                  </AccordionButton>
+                </h2> 
+                <AccordionPanel pb={4} onChange={handleFilter}>
+                 <Checkbox value={"Men Slim Fit Casual Shirt"} defaultChecked={brand.includes("Men Slim Fit Casual Shirt")}>Shirt</Checkbox>
+                </AccordionPanel>
+                <AccordionPanel pb={4} onChange={handleFilter} >
+                 <Checkbox value={"Men Slim Fit Jeans"} defaultChecked={brand.includes("Men Slim Fit Jeans")}>Jeans</Checkbox>
+                </AccordionPanel>
+              </>
+            )}
+          </AccordionItem>
+          <AccordionItem>
+            {({ isExpanded }) => (
+              <>
+                <h2>
+                  <AccordionButton>
+                    <Box as="span" flex="1" textAlign="left">
+                      Size
+                    </Box>
+                    {isExpanded ? (
+                      <MinusIcon fontSize="12px" />
+                    ) : (
+                      <AddIcon fontSize="12px" />
+                    )}
+                  </AccordionButton>
+                </h2> 
+                <AccordionPanel pb={4} onChange={handleFilter}>
+                 <Checkbox defaultChecked={brand.includes("Men Slim Fit Casual Shirt")}>Small</Checkbox>
+                </AccordionPanel>
+                <AccordionPanel pb={4} onChange={handleFilter} >
+                 <Checkbox defaultChecked={brand.includes("Men Slim Fit Jeans")}>Large</Checkbox>
                 </AccordionPanel>
               </>
             )}
