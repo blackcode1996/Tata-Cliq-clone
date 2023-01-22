@@ -101,9 +101,11 @@ export const Navbar = () => {
               Category
             </MenuButton>
             <MenuList>
-              <MenuItem minH="48px">
-                <span>Men's Wear</span>
-              </MenuItem>
+              <Link to="/products">
+                <MenuItem minH="48px">
+                  <span>Men's Wear</span>
+                </MenuItem>
+              </Link>
               <MenuItem minH="40px">
                 <span>Kid's Wear</span>
               </MenuItem>
@@ -434,9 +436,11 @@ export const Navbar = () => {
 
                   <div className="dropdown-menu-category-brands-second">
                     <div className="dropdown-menu-category-brands-second-first h5-tag">
-                      <p id="brand_menu" style={{ fontWeight: "300" }}>
-                        Men's Wear
-                      </p>
+                      <Link to="/products">
+                        <p id="brand_menu" style={{ fontWeight: "300" }} >
+                          Men's Wear
+                        </p>
+                      </Link>
                     </div>
                     <div className="dropdown-menu-category-brands-second-second">
                       <div>
