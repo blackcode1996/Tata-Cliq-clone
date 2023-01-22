@@ -45,10 +45,9 @@ const ProductList = () => {
 };
 
 const DivWrapper = styled.div`
-  margin-top: 100px;
+  margin-top: 95px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
-  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, max-content));
 `;
 
 export default ProductList;

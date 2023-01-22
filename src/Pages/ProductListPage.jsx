@@ -18,9 +18,9 @@ export const ProductListPage = () => {
           <FilterWrapper>
             <Sidebar />
           </FilterWrapper>
-          <BooksListWrapper>
+          <ListWrapper>
             <ProductList />
-          </BooksListWrapper>
+          </ListWrapper>
         </DivWrapper>
       </div>
       <Footer />
@@ -30,18 +30,18 @@ export const ProductListPage = () => {
 
 const DivWrapper = styled.div`
   display: flex;
-  gap: 20px;
 `;
 const FilterWrapper = styled.div`
-  width: 20%;
+  width: 30%;
   margin-left: 30px;
-  margin-top: 100px;
+  margin-top: 140px;
 `;
-const BooksListWrapper = styled.div`
+const ListWrapper = styled.div`
   width: 80%;
 `;
 const MensTextDiv = styled.div`
 justify-content: "center";
 text-align: center;
-margin-top: 10px;
+padding-top: 20px;
+margin-bottom: -40px;
 `;

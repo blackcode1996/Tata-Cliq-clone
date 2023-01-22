@@ -10,7 +10,6 @@ import {
   Tooltip,
   Text,
 } from "@chakra-ui/react";
-import { useState } from "react";
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -27,7 +26,7 @@ function Rating({ rating }) {
               <BsStarFill
                 key={i}
                 style={{ marginLeft: "1" }}
-                color={i < rating ? "teal.500" : "gray.300"}
+                color={i < rating ? "red.500" : "red.300"}
               />
             );
           }
@@ -43,7 +42,7 @@ function Rating({ rating }) {
 export const ProductCard = ({ product }) => {
   return (
     <Flex
-      p={50}
+      p={5}
       maxH={"full"}
       display={product.images[0] ? "block" : "none"}
       alignItems="center"
@@ -53,11 +52,11 @@ export const ProductCard = ({ product }) => {
         bg={useColorModeValue("white", "gray.800")}
         maxW="full"
         maxH="full"
-        h={"550px"}
-        borderWidth="0px"
+        borderWidth="5px"
         rounded="lg"
         shadow="lg"
         position="relative"
+        roundedTop="3xl"
       >
         <Circle p={"7px"} position="absolute" top={2} right={2} bg="#52b155">
           <Text color={"#fff"}>{product.brand}</Text>
@@ -65,14 +64,16 @@ export const ProductCard = ({ product }) => {
         <Link to={`/products/${product.id}`}>
           <Image
             w={"full"}
-            h={"60%"}
+            m={"auto"}
+            h={"50%"}
+            objectFit={"contain"}
             src={
               product.images[0]
                 ? product.images[0]
                 : "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHNoaXJ0fGVufDB8fDB8fA%3D%3D&w=1000&q=80"
             }
             alt={`Picture of ${product.title}`}
-            roundedTop="lg"
+            roundedTop="2xl"
           />
         </Link>
         <Box p="6">
@@ -99,11 +100,11 @@ export const ProductCard = ({ product }) => {
               fontSize={"1.2em"}
             >
               <chakra.a href={"#"} display={"flex"}>
-                <Icon as={FiShoppingCart} h={7} w={7} alignSelf={"center"} />
+                <Icon as={FiShoppingCart} h={8} w={8} alignSelf={"center"} />
               </chakra.a>
             </Tooltip>
           </Flex>
-          <Text h="40px">{product.subtitle}</Text>
+          <Text h="20px">{product.subtitle}</Text>
 
           <Flex justifyContent="space-between" alignContent="center">
             <Rating rating={product.rating} />
