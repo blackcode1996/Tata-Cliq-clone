@@ -38,7 +38,7 @@ function Rating({ rating }) {
     </Box>
   );
 }
-
+//part
 export const ProductCard = ({ product }) => {
   return (
     <Flex
