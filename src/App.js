@@ -1,18 +1,9 @@
-import { Footer } from './Components/Footer';
-import { Navbar } from './Components/Navbar';
-import SingleCart from './Components/SingleCart';
-import { MainRoutes } from './Pages/MainRoutes';
-import { SingleProduct } from './Pages/SingleProduct';
+import { MainRoutes } from "./Pages/MainRoutes";
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-         <MainRoutes/>
-      <Footer/>
-        
-      {/* <SingleCart/>
-      <SingleProduct/> */}
+      <MainRoutes />
     </div>
   );
 }

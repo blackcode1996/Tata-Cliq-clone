@@ -8,14 +8,10 @@ import FavoriteBorderSharpIcon from "@mui/icons-material/FavoriteBorderSharp";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import LargeWithLogoLeft from "./bottom";
 
-const SingleCart = ({data}) => { 
- console.log("my",data)
+const SingleCart = () => {
 
-console.log("img",data.images[0])
 
-const [curimg, setImg] = useState({})  
-    
-
+  const [curimg, setImg] = useState({});
 
   return (
     <>

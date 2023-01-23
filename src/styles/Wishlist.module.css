@@ -1,0 +1,61 @@
+.sectionA {
+  background-color: rgb(236, 236, 236);
+  /* border: 2px solid black; */
+  padding: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+.sidebar1A {
+  width: 20%;
+  /* border: 2px solid grey; */
+}
+.menuhead {
+  display: flex;
+  padding: 20px;
+  background-color: rgb(249, 249, 249);
+  align-content: center;
+  font-size: 1.5rem;
+  /* border: 2px solid red; */
+}
+.menucard {
+  display: flex;
+  padding: 8px;
+  width: 100%;
+  align-content: center;
+  background-color: white;
+  /* border: 2px solid black; */
+  height: 3rem;
+}
+.menucard :hover {
+  color: rgb(255, 68, 104);
+}
+.menuimage {
+  height: 70%;
+  width: 12%;
+  /* border: 2px solid green; */
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.menuimage img {
+  height: 100%;
+  width: 100%;
+}
+.menubutton {
+  /* border: 2px solid pink; */
+  font-size: 1rem;
+}
+.sectionB {
+  background-color: white;
+  width: 50%;
+  border: 2px solid;
+}
+.sectionC {
+  background-color: white;
+  width: 20%;
+  border: 2px solid;
+  height: 200px;
+}
