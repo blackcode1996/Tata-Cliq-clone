@@ -8,9 +8,7 @@ import { faFolder } from "@fortawesome/free-regular-svg-icons";
 import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import { useToast,Flex } from '@chakra-ui/react'
-import logo from './Assests/logo.png'
-import { useToast } from '@chakra-ui/react'
+import { useToast } from "@chakra-ui/react";
 import {
   Menu,
   MenuButton,
@@ -27,7 +25,7 @@ import { IconButton } from "@chakra-ui/react";
 import "./Navbar.css";
 
 export const Navbar = () => {
-  const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0(); 
+  const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
   const [current, setcurrent] = useState(false);
   const [text, setText] = useState("");
   let navigate = useNavigate();
@@ -52,7 +50,7 @@ export const Navbar = () => {
     "eyewear",
     "Men's Clothing",
   ];
-  const toast = useToast()
+  const toast = useToast();
   function handinginputbox() {
     if (text.length > 1) {
       setcurrent(true);
@@ -66,31 +64,29 @@ export const Navbar = () => {
       setcurrent(false);
     }
   }
-  
+
   function clickoninputdrop(targ) {
     document.getElementById("right_lower_box_third_input_box_id").value = targ;
   }
-  
-  
-    if(isAuthenticated){
-      toast({
-        title: 'Account created.',
-        description: "We've created your account for you.",
-        status: 'success',
-        duration: 1000,
-        isClosable: true,
-      })
-     
-    }
-  console.log(user)
-  console.log(window.location.origin)
+
+  if (isAuthenticated) {
+    toast({
+      title: "Account created.",
+      description: "We've created your account for you.",
+      status: "success",
+      duration: 1000,
+      isClosable: true,
+    });
+  }
+  console.log(user);
+  console.log(window.location.origin);
   return (
     <>
       <div id="main_navbar">
         <div id="navbar_left_box">
           <Link to="/">
             {" "}
-            <img id="img_of_logo" src={logo} alt="logo"/>
+            <img id="img_of_logo" src="https://i.ibb.co/y459KXM/logo.png"></img>
           </Link>
         </div>
         <div id="navbar_left_bar">
@@ -127,7 +123,7 @@ export const Navbar = () => {
         </div>
         <div id="navbar_right_box">
           <div id="top_log">
-            <img className="w-16" src={logo} alt="logo" />
+            <img src="/Tata_Assets/logo.png" alt="logo" />
           </div>
           <div id="right_upper_box">
             <div id="right_upper_box_left_box">
@@ -142,34 +138,47 @@ export const Navbar = () => {
               <div>
                 <h1 className="upper_boxof_navbar_h1">Gift Card</h1>
               </div>
-            
-              
-              <div>
-                <Link >
-                  {" "}
-                 {isAuthenticated ? <h1 className="upper_boxof_navbar_h1" onClick={() => logout({ returnTo: window.location.origin })}>Loout</h1>:<h1 className="upper_boxof_navbar_h1" onClick={() => loginWithRedirect()}>Login</h1>}
 
-              {isAuthenticated&& <div style={{margin:"auto",marginLeft:"10px"}}><img src={user.picture} alt="logo" style={{backgroundColor:"white",borderRadius:"50%",width:"25%"}}/></div>}
+              {isAuthenticated && (
+                <div style={{ margin: "auto", marginLeft: "10px" }}>
+                  <img
+                    src={user.picture}
+                    alt="logo"
+                    style={{
+                      backgroundColor: "white",
+                      borderRadius: "50%",
+                      width: "25%",
+                    }}
+                  />
+                </div>
+              )}
               <div>
-                <Link >
+                <Link>
                   {" "}
-                 {isAuthenticated ? <h1 className="upper_boxof_navbar_h1" onClick={() => logout({ returnTo: window.location.origin })}>Logout</h1>:<h1 className="upper_boxof_navbar_h1" onClick={() => loginWithRedirect()}>Login</h1>}
-
+                  {isAuthenticated ? (
+                    <h1
+                      className="upper_boxof_navbar_h1"
+                      onClick={() =>
+                        logout({ returnTo: window.location.origin })
+                      }
+                    >
+                      Loout
+                    </h1>
+                  ) : (
+                    <h1
+                      className="upper_boxof_navbar_h1"
+                      onClick={() => loginWithRedirect()}
+                    >
+                      Login
+                    </h1>
+                  )}
                 </Link>
-
               </div>
               <div>
-                <Flex>
                 <Link to="/admin">
                   {" "}
                   <h1 className="upper_boxof_navbar_h1">Admin</h1>
                 </Link>
-                {isAuthenticated&& <div style={{margin:"auto",marginLeft:"40px"}}><img src={user.picture} alt="logo" style={{backgroundColor:"white",borderRadius:"50%",width:"35%",border:"2px solid gray"}}/></div>}
-                   {isAuthenticated&& <h3 style={{color:"white",marginTop:"7px",marginRight:"7px"}}>{user.given_name}</h3>}
-                </Flex>
-              
-                
-                
               </div>
               <div></div>
             </div>
@@ -428,7 +437,7 @@ export const Navbar = () => {
                   <div className="dropdown-menu-category-brands-second">
                     <div className="dropdown-menu-category-brands-second-first h5-tag">
                       <Link to="/products">
-                        <p id="brand_menu" style={{ fontWeight: "300" }} >
+                        <p id="brand_menu" style={{ fontWeight: "300" }}>
                           Men's Wear
                         </p>
                       </Link>
@@ -1060,7 +1069,7 @@ export const Navbar = () => {
               <div>
                 <div>
                   <h1 className="icon_heart">
-                    <Link to="/wishlist"><FontAwesomeIcon icon={faHeart} /></Link>
+                    <FontAwesomeIcon icon={faHeart} />
                   </h1>
                 </div>
               </div>
@@ -1079,4 +1088,4 @@ export const Navbar = () => {
       </div>
     </>
   );
-}
+};
