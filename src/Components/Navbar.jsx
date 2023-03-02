@@ -9,6 +9,8 @@ import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useToast,Flex } from '@chakra-ui/react'
+import logo from './Assests/logo.png'
+import { useToast } from '@chakra-ui/react'
 import {
   Menu,
   MenuButton,
@@ -70,7 +72,16 @@ export const Navbar = () => {
   }
   
   
-    
+    if(isAuthenticated){
+      toast({
+        title: 'Account created.',
+        description: "We've created your account for you.",
+        status: 'success',
+        duration: 1000,
+        isClosable: true,
+      })
+     
+    }
   console.log(user)
   console.log(window.location.origin)
   return (
@@ -79,7 +90,7 @@ export const Navbar = () => {
         <div id="navbar_left_box">
           <Link to="/">
             {" "}
-            <img id="img_of_logo" src="https://i.ibb.co/y459KXM/logo.png"></img>
+            <img id="img_of_logo" src={logo} alt="logo"/>
           </Link>
         </div>
         <div id="navbar_left_bar">
@@ -94,9 +105,11 @@ export const Navbar = () => {
               Category
             </MenuButton>
             <MenuList>
-              <MenuItem minH="48px">
-                <span>Men's Wear</span>
-              </MenuItem>
+              <Link to="/products">
+                <MenuItem minH="48px">
+                  <span>Men's Wear</span>
+                </MenuItem>
+              </Link>
               <MenuItem minH="40px">
                 <span>Kid's Wear</span>
               </MenuItem>
@@ -114,7 +127,7 @@ export const Navbar = () => {
         </div>
         <div id="navbar_right_box">
           <div id="top_log">
-            <img src="/Tata_Assets/logo.png" alt="logo" />
+            <img className="w-16" src={logo} alt="logo" />
           </div>
           <div id="right_upper_box">
             <div id="right_upper_box_left_box">
@@ -130,13 +143,18 @@ export const Navbar = () => {
                 <h1 className="upper_boxof_navbar_h1">Gift Card</h1>
               </div>
             
-             
-                
               
               <div>
                 <Link >
                   {" "}
                  {isAuthenticated ? <h1 className="upper_boxof_navbar_h1" onClick={() => logout({ returnTo: window.location.origin })}>Loout</h1>:<h1 className="upper_boxof_navbar_h1" onClick={() => loginWithRedirect()}>Login</h1>}
+
+              {isAuthenticated&& <div style={{margin:"auto",marginLeft:"10px"}}><img src={user.picture} alt="logo" style={{backgroundColor:"white",borderRadius:"50%",width:"25%"}}/></div>}
+              <div>
+                <Link >
+                  {" "}
+                 {isAuthenticated ? <h1 className="upper_boxof_navbar_h1" onClick={() => logout({ returnTo: window.location.origin })}>Logout</h1>:<h1 className="upper_boxof_navbar_h1" onClick={() => loginWithRedirect()}>Login</h1>}
+
                 </Link>
 
               </div>
@@ -409,9 +427,11 @@ export const Navbar = () => {
 
                   <div className="dropdown-menu-category-brands-second">
                     <div className="dropdown-menu-category-brands-second-first h5-tag">
-                      <p id="brand_menu" style={{ fontWeight: "300" }}>
-                        Men's Wear
-                      </p>
+                      <Link to="/products">
+                        <p id="brand_menu" style={{ fontWeight: "300" }} >
+                          Men's Wear
+                        </p>
+                      </Link>
                     </div>
                     <div className="dropdown-menu-category-brands-second-second">
                       <div>
@@ -1040,7 +1060,7 @@ export const Navbar = () => {
               <div>
                 <div>
                   <h1 className="icon_heart">
-                    <FontAwesomeIcon icon={faHeart} />
+                    <Link to="/wishlist"><FontAwesomeIcon icon={faHeart} /></Link>
                   </h1>
                 </div>
               </div>
@@ -1059,4 +1079,4 @@ export const Navbar = () => {
       </div>
     </>
   );
-};
+}

@@ -8,7 +8,6 @@ import "./Home.css"
 import { useAuth0 } from "@auth0/auth0-react";
 const HomePage = () => {
   const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0(); 
-  // console.log("jjd"
     const settings1 = {
         infinite: true,
         dots: false,
