@@ -9,6 +9,7 @@ import {
   chakra,
   Tooltip,
   Text,
+  GridItem,
 } from "@chakra-ui/react";
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
@@ -41,31 +42,33 @@ function Rating({ rating }) {
 //part
 export const ProductCard = ({ product }) => {
   return (
-    <Flex
+    <GridItem
       p={5}
-      maxH={"full"}
-      display={product.images[0] ? "block" : "none"}
+      // h={"300px"}
+      w={"100%"}
+      // display={product.images[0] ? "block" : "none"}
       alignItems="center"
       justifyContent="center"
     >
       <Box
+        h={"lg"}
+        w={"100%"}
         bg={useColorModeValue("white", "gray.800")}
-        maxW="full"
-        maxH="full"
         borderWidth="5px"
         rounded="lg"
         shadow="lg"
         position="relative"
-        roundedTop="3xl"
+        roundedTop="lg"
+        // border={"2px solid black"}
       >
         <Circle p={"7px"} position="absolute" top={2} right={2} bg="#52b155">
           <Text color={"#fff"}>{product.brand}</Text>
         </Circle>
         <Link to={`/products/${product.id}`}>
           <Image
-            w={"full"}
+            w={"100%"}
             m={"auto"}
-            h={"50%"}
+            h={"70%"}
             objectFit={"contain"}
             src={
               product.images[0]
@@ -73,7 +76,7 @@ export const ProductCard = ({ product }) => {
                 : "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHNoaXJ0fGVufDB8fDB8fA%3D%3D&w=1000&q=80"
             }
             alt={`Picture of ${product.title}`}
-            roundedTop="2xl"
+            //
           />
         </Link>
         <Box p="6">
@@ -120,6 +123,6 @@ export const ProductCard = ({ product }) => {
           </Flex>
         </Box>
       </Box>
-    </Flex>
+    </GridItem>
   );
 };
