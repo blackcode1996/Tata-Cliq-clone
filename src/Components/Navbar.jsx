@@ -8,6 +8,7 @@ import { faFolder } from "@fortawesome/free-regular-svg-icons";
 import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
+import { useToast,Flex } from '@chakra-ui/react'
 import logo from './Assests/logo.png'
 import { useToast } from '@chakra-ui/react'
 import {
@@ -65,7 +66,7 @@ export const Navbar = () => {
       setcurrent(false);
     }
   }
-
+  
   function clickoninputdrop(targ) {
     document.getElementById("right_lower_box_third_input_box_id").value = targ;
   }
@@ -142,21 +143,33 @@ export const Navbar = () => {
                 <h1 className="upper_boxof_navbar_h1">Gift Card</h1>
               </div>
             
-             
-                
+              
+              <div>
+                <Link >
+                  {" "}
+                 {isAuthenticated ? <h1 className="upper_boxof_navbar_h1" onClick={() => logout({ returnTo: window.location.origin })}>Loout</h1>:<h1 className="upper_boxof_navbar_h1" onClick={() => loginWithRedirect()}>Login</h1>}
+
               {isAuthenticated&& <div style={{margin:"auto",marginLeft:"10px"}}><img src={user.picture} alt="logo" style={{backgroundColor:"white",borderRadius:"50%",width:"25%"}}/></div>}
               <div>
                 <Link >
                   {" "}
                  {isAuthenticated ? <h1 className="upper_boxof_navbar_h1" onClick={() => logout({ returnTo: window.location.origin })}>Logout</h1>:<h1 className="upper_boxof_navbar_h1" onClick={() => loginWithRedirect()}>Login</h1>}
+
                 </Link>
 
               </div>
               <div>
+                <Flex>
                 <Link to="/admin">
                   {" "}
                   <h1 className="upper_boxof_navbar_h1">Admin</h1>
                 </Link>
+                {isAuthenticated&& <div style={{margin:"auto",marginLeft:"40px"}}><img src={user.picture} alt="logo" style={{backgroundColor:"white",borderRadius:"50%",width:"35%",border:"2px solid gray"}}/></div>}
+                   {isAuthenticated&& <h3 style={{color:"white",marginTop:"7px",marginRight:"7px"}}>{user.given_name}</h3>}
+                </Flex>
+              
+                
+                
               </div>
               <div></div>
             </div>
