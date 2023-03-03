@@ -7,19 +7,19 @@ import { Checkout } from "./Checkout";
 import HomePage from "./HomePage";
 import { Login } from "./Login";
 import { ProductListPage } from "./ProductListPage";
-import { SingleProduct } from "./SingleProduct";
 import { Admin } from "../Admin/Pages/Admin";
 import Pagenotfound from "./Pagenotfound";
 import EditUser from "../Admin/Components/Users/EditUser";
 import EditProduct from "../Admin/Components/Product/EditProduct";
 import {Wishlist} from './Wishlist';
+import SingleCart from "../Components/SingleCart";
 export const MainRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />}></Route>
       <Route path="/login" element={<Login />}></Route>
       <Route path="/products" element={<ProductListPage />}></Route>
-      <Route path="/products/:id" element={<SingleProduct />}></Route>
+      <Route path="/products/:id" element={<SingleCart />}></Route>
       <Route path="/checkout" element={<Checkout />}></Route>
       <Route path="/cart" element={<Cart />}></Route>
       <Route path="*" element={<Pagenotfound />}></Route>
