@@ -1,15 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
-
 * {
   font-family: "Rubik", sans-serif;
 }
-
 #main_navbar {
   background-color: #212121;
-
+  padding: 5px;
   display: flex;
 }
-
 #brand_menu:hover {
   color: rgb(255, 105, 24);
 }
@@ -926,9 +923,6 @@
   .right_lower_box_second_first {
     display: none;
   }
-  #img_of_logo {
-    opacity: 0;
-  }
 }
 @media only screen and (max-width: 600px) {
   #right_upper_box {
@@ -936,6 +930,7 @@
   }
   #top_log {
     display: block;
+    width: 150px;
     margin: auto;
   }
   #navbar_left_box {
@@ -957,9 +952,9 @@
     margin: auto;
   }
 
-  #img_of_logo {
+  /* #img_of_logo {
     opacity: 0;
-  }
+  } */
 }
 @media only screen and (max-width: 400px) {
   #right_lower_box {
@@ -969,10 +964,10 @@
     background-color: #212121;
     color: white;
   }
-  #img_of_logo {
+  /* #img_of_logo {
     opacity: 0;
     display: none;
-  }
+  } */
 }
 @media only screen and (max-width: 240px) {
   #navbar_left_bar {

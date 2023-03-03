@@ -6,17 +6,23 @@
 }
 .slide1{
     width: 100%;
-    height: 400px;
+    height: 500px;
     margin: auto;
-   
+    border-radius: 1%;
 }
 .slick-arrow.slick-prev,.slick-arrow.slick-next{
-    background-color:rgb(185, 177, 177);
+    /* background-color:rgb(185, 177, 177); */
     z-index: 1; 
-    height: 30px; 
-    width: 30px;
+    height: 60px; 
+    width: 60px;
     border-radius: 50%;
+    
 }
+.slick-arrow.slick-prev::before,.slick-arrow.slick-next::before{
+    font-size: 55px;
+    color: #fff;
+}
+
 .slick-arrow.slick-next{
     margin-right: 70px;
 }

@@ -22,6 +22,7 @@ import {
 } from "@chakra-ui/react";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { IconButton } from "@chakra-ui/react";
+import logo from "./Assests/logo.png"
 import "./Navbar.css";
 
 export const Navbar = () => {
@@ -86,7 +87,7 @@ export const Navbar = () => {
         <div id="navbar_left_box">
           <Link to="/">
             {" "}
-            <img id="img_of_logo" src="https://i.ibb.co/y459KXM/logo.png"></img>
+            <img id="img_of_logo" src={logo}></img>
           </Link>
         </div>
         <div id="navbar_left_bar">
@@ -123,7 +124,7 @@ export const Navbar = () => {
         </div>
         <div id="navbar_right_box">
           <div id="top_log">
-            <img src="/Tata_Assets/logo.png" alt="logo" />
+            <img src={logo} alt="logo" />
           </div>
           <div id="right_upper_box">
             <div id="right_upper_box_left_box">

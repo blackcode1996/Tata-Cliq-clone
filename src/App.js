@@ -1,5 +1,6 @@
 import SingleCart from "./Components/SingleCart";
 import { MainRoutes } from "./Pages/MainRoutes";
+import "./App.css"
 
 function App() {
   return (
