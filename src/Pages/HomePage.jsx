@@ -6,16 +6,22 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 import "./Home.css"
 import { useAuth0 } from "@auth0/auth0-react";
+
+
+
 const HomePage = () => {
   const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0(); 
+
+
     const settings1 = {
         infinite: true,
         dots: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
         lazyLoad: true,
         autoplay: true,
         autoplaySpeed: 1500,
+        adaptiveHeight:true,
+        fade:true,
+        useCss:true,
       };
       const settings2={
         
@@ -50,7 +56,7 @@ const HomePage = () => {
         }
       ]
       }
-    const carousel=[{id:1,img:"https://assets.tatacliq.com/medias/sys_master/images/45584593518622.gif"},
+    const carousel=[{id:1,img:"https://tatacliq.netlify.app/images/home%20page/top%20-carousel%20(1).jpg"},
                      {id:2,img:"https://assets.tatacliq.com/medias/sys_master/images/45581158809630.jpg"},
                      {id:3,img:"https://assets.tatacliq.com/medias/sys_master/images/45554503090206.jpg"},
                      {id:4,img:"https://assets.tatacliq.com/medias/sys_master/images/45581158940702.jpg"},
@@ -82,14 +88,11 @@ const HomePage = () => {
     <>
     <Navbar/>
     <div  style={{background:"rgb(236,236,236)"}}>
-
         <div style={{ width: "100%"}}>
-        <Slider {...settings1}>
+        <Slider {...settings1} >
           {carousel.map((item) => (
-            <div key={item.id}>
-             
-              <img className="slide1" src={item.img} alt=""  />
-              
+            <div key={item.id} >
+              <img className="slide1" src={item.img} alt=""/>
             </div>    
           ))}
         </Slider>
