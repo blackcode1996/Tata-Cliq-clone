@@ -1,0 +1,172 @@
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 90%;
+
+  margin: auto;
+}
+.child {
+  width: 100%;
+  height: 680px;
+
+}
+.child2 {
+  width: 100%;
+  text-align: left;
+}
+.child img {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+.imgbox {
+  width: 75%;
+  height: 550px;
+}
+.small_img_flex {
+  width: 70%;
+  gap: 7px;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.small_img {
+  width: 100%;
+  height: 100%;
+
+  margin: auto;
+}
+.rightarrow {
+  margin-top: 285px;
+  margin-right: 15px;
+}
+.rightarrow:hover {
+  color: orangered;
+}
+.leftarrow {
+  margin-top: 285px;
+  margin-left: 15px;
+}
+.leftarrow:hover {
+  color: orangered;
+}
+.right_box_h1 {
+  margin-left: 14%;
+  text-align: left;
+  margin-top: 15px;
+}
+.logoicon {
+  margin-left: 30%;
+}
+.heard {
+  margin-left: 23px;
+}
+.second_text {
+  margin-left: 14%;
+  margin-top: 3px;
+}
+.price {
+  margin-left: 14%;
+  margin-top: 25px;
+}
+
+
+
+.addbtn{
+  border-radius: 10px;
+ color: red;
+  font-size: 14px;
+  padding: 2px;
+margin-left: 50px;
+border: 2px solid red;
+}
+
+@media only screen and (max-width: 376px) {
+
+  .main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 90%;
+
+   text-align: "left";
+
+  }
+
+  .child {
+    width: 100%;
+    height: 680px;
+    padding: 15px 7px;
+
+  }
+  .child2 {
+    width: 80%;
+
+    text-align: left;
+    justify-content: left;
+
+  }
+
+  .child img {
+    margin: auto;
+    width: 90%;
+    height: 90%;
+  }
+  .imgbox {
+    width: 65%;
+    height: 450px;
+  }
+  .small_img_flex {
+    width: 50%;
+    gap: 5px;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .small_img {
+    width: 90%;
+    height: 90%;
+  
+    margin: auto;
+  }
+  .rightarrow {
+    margin-top: 185px;
+    margin-right: 10px;
+  }
+  .rightarrow:hover {
+    color: orangered;
+  }
+  .leftarrow {
+    margin-top: 185px;
+    margin-left: 10px;
+  }
+  .leftarrow:hover {
+    color: orangered;
+  }
+  .right_box_h1 {
+    margin-left: 7%;
+    text-align: left;
+    margin-top : 7px;
+  }
+  .logoicon {
+    margin-left: 15%;
+  }
+  .heard {
+    margin-left: 23px;
+  }
+  .second_text {
+    margin-left: 7%;
+    margin-top: 1px;
+  }
+  .price {
+    margin-left: 7%;
+    margin-top: 12px;
+  }
+  .addbtn{
+    border-radius: 10px;
+   color: red;
+    font-size: 10px;
+    padding: 1px;
+  margin-left: 25px;
+  border: 2px solid red;
+  }
+}
