@@ -40,9 +40,3 @@ Tata Cliq is an Indian e-commerce company based in Mumbai, India. It is owned by
 | Shivam Dubey | Single Product Page & Navbar |
 | Aakash Mukherjee | Product Page |
 
-
-### API- 
-Link-https://wadrobe.onrender.com/men
-
-Resources
-1) /mens
