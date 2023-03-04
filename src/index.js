@@ -12,20 +12,16 @@ root.render(
     
     
     <Auth0Provider
-    domain="dev-qw0t3p2bxikhvxjm.us.auth0.com"
-    clientId="itt9njFaT9Gbc0efUtQxUaxtsvFWYPjx"
+    domain="dev-di04yhm7yyqylclm.au.auth0.com"
+    clientId="ntlkcGwaab5NHaEnwttxw8e7CGw73PSi"
     authorizationParams={{
         redirect_uri: window.location.origin
       }}>
         <BrowserRouter>
         <Provider store={store}>
-      
             <ChakraProvider>
-           
-                <App />
-                
+                <App />   
             </ChakraProvider>
-    
         </Provider>
         </BrowserRouter>
         </Auth0Provider>
