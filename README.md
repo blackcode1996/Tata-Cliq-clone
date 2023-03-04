@@ -1,18 +1,31 @@
 Tata Cliq Clone
 
+<h2>
+Tata Cliq is an Indian e-commerce company based in Mumbai, India. It is owned by Tata UniStore Limited, of Tata Group. TataCLiQ operates in categories such as Electronics, Fashion, Footwear, and Accessories.
+</h2>
+<br>
 
-## Credits
-All collaborators list with their profile link.
+<h2>Landing Page</h2>
+
+![Screenshot (84)](https://i.ibb.co/LrdQqKM/tatacliq.png)
+
+<h2>Product Page</h2>
+
+![Screenshot (84)](https://i.ibb.co/ScPk695/Screenshot-17.png)
+
+<h2>Footer Page</h2>
+
+![Screenshot (84)](https://i.ibb.co/3svyTVp/Screenshot-16.png)
 
 
-### Collaborators-
->**Team-Lead:- Aakash Mukherjee** <https://github.com/blackcode1996>
+
+
 
 | Team members | Github-profiles |
 | ------ | ------ |
 | Aniket Parmar | <https://github.com/aniketparmar29> | Backend |
-| Ranbir Singh | <https://github.com/sranbir392> | Navbar,Footer,Cart & WishList |
-| Sajan Kumar |  <https://github.com/sajan1789> | HomePage & Login |
+| Ranbir Singh | <https://github.com/sranbir392> | Footer,Cart & Checkout |
+
 | Shivam Dubey |  <https://github.com/Shivam00002> |  |
 | Aakash Mukherjee | <https://github.com/blackcode1996> | Product Page & single Product Page |
 
@@ -22,15 +35,14 @@ All collaborators list with their profile link.
 | Team members | Functionality |
 | ------ | ------ |
 | Aniket Parmar | Backend |
-| Ranbir Singh | Footer,Cart & WishList |
+| Ranbir Singh | Footer,Cart & Checkout,Navbar,Products|
 | Sajan Kumar | HomePage & Login |
 | Shivam Dubey | Single Product Page & Navbar |
 | Aakash Mukherjee | Product Page |
 
 
 ### API- 
-Link-https://atatclickdatabase.vercel.app/
+Link-https://wadrobe.onrender.com/men
 
 Resources
-1) /clothing 
-2) /Gagets 
+1) /mens
