@@ -61,7 +61,7 @@ const HomePage = () => {
                      {id:3,img:"https://assets.tatacliq.com/medias/sys_master/images/45554503090206.jpg"},
                      {id:4,img:"https://assets.tatacliq.com/medias/sys_master/images/45581158940702.jpg"},
                      {id:5,img:"https://assets.tatacliq.com/medias/sys_master/images/45581159006238.jpg"},
-                     {id:6,img:"https://assets.tatacliq.com/medias/sys_master/images/45536787398686.jpg"},
+                     {id:6,img:"https://assets.tatacliq.com/medias/sys_master/images/46197908439070.jpg"},
                    ];
       const last=[{id:1,img:"https://assets.tatacliq.com/medias/sys_master/images/45513137127454.jpg"},
                    {id:2,img:"https://assets.tatacliq.com/medias/sys_master/images/45567584534558.jpg"},
@@ -92,7 +92,7 @@ const HomePage = () => {
         <Slider {...settings1} >
           {carousel.map((item) => (
             <div key={item.id} >
-              <img className="slide1" src={item.img} alt=""/>
+              <img className="slide1" src={item.img} alt="" />
             </div>    
           ))}
         </Slider>
@@ -126,7 +126,9 @@ const HomePage = () => {
           <img src="https://assets.tatacliq.com/medias/sys_master/images/45539109339166.jpg" alt="" />
         </div>
         <div >
-          <img src="https://assets.tatacliq.com/medias/sys_master/images/45461314043934.jpg" alt="" />
+        <div>
+          <img style={{margin:"auto"}} src="https://assets.tatacliq.com/medias/sys_master/images/45461314043934.jpg" alt="" />
+        </div>
         </div>
         <div className='card'>
           <img src="https://assets.tatacliq.com/medias/sys_master/images/45587495813150.jpg" alt="" />
@@ -135,7 +137,7 @@ const HomePage = () => {
           <img src="https://assets.tatacliq.com/medias/sys_master/images/45567395594270.jpg" alt="" />
         </div>
         <div>
-          <img src="https://tata-cliq-clone.netlify.app/Images/2.png" alt="" />
+          <img style={{margin:"auto"}} src="https://tata-cliq-clone.netlify.app/Images/2.png" alt="" />
         </div>
           <div className='card'>
             <img src="https://assets.tatacliq.com/medias/sys_master/images/45587477364766.jpg" alt="" />
@@ -145,10 +147,10 @@ const HomePage = () => {
             
           </div>
           <div>
-            <img src="https://assets.tatacliq.com/medias/sys_master/images/45589087453214.gif" alt="" />
+            <img style={{margin:"auto"}} src="https://assets.tatacliq.com/medias/sys_master/images/45589087453214.gif" alt="" />
           </div>
           <div>
-            <img src="https://tata-cliq-clone.netlify.app/Images/7.png" alt="" />
+            <img style={{margin:"auto"}} src="https://tata-cliq-clone.netlify.app/Images/7.png" alt="" />
           </div>
           <div className='card'>
             <img src="https://assets.tatacliq.com/medias/sys_master/images/45576213397534.jpg" alt="" />
@@ -157,7 +159,7 @@ const HomePage = () => {
             <img src="https://assets.tatacliq.com/medias/sys_master/images/45581156155422.jpg" alt="" />
           </div>
           <div>
-            <img src="https://tata-cliq-clone.netlify.app/Images/9.png" alt="" />
+            <img style={{margin:"auto"}} src="https://tata-cliq-clone.netlify.app/Images/9.png" alt="" />
           </div>
           <div className='card'>
             <img src="https://assets.tatacliq.com/medias/sys_master/images/45382586564638.jpg" alt="" />
@@ -166,13 +168,13 @@ const HomePage = () => {
             <img src="https://assets.tatacliq.com/medias/sys_master/images/45382587318302.jpg" alt="" />
           </div>
           <div style={{marginBottom:"65px"}}>
-            <img src="https://assets.tatacliq.com/medias/sys_master/images/45589087453214.gif" alt="" />
+            <img style={{margin:"auto"}} src="https://assets.tatacliq.com/medias/sys_master/images/45589087453214.gif" alt="" />
           </div>
           <div className='banner'>
-            <img src="https://assets.tatacliq.com/medias/sys_master/images/45032248639518.jpg" alt="" style={{height:"300px"}}/>
+            <img style={{margin:"auto", height:"300px"}} src="https://assets.tatacliq.com/medias/sys_master/images/45032248639518.jpg" alt="" />
           </div>
           <div>
-            <img src="https://tata-cliq-clone.netlify.app/Images/1.png" alt="" />
+            <img style={{margin:"auto"}} src="https://tata-cliq-clone.netlify.app/Images/1.png" alt="" />
           </div>
           <div className='card'>
             <img src="https://assets.tatacliq.com/medias/sys_master/images/45584580378654.jpg" alt="" />
@@ -188,7 +190,7 @@ const HomePage = () => {
             
           </div>
           <div>
-            <img src="https://assets.tatacliq.com/medias/sys_master/images/45589087453214.gif" alt="" />
+            <img style={{margin:"auto"}} src="https://assets.tatacliq.com/medias/sys_master/images/45589087453214.gif" alt="" />
           </div>
           <div className='card'>
             <img src="https://assets.tatacliq.com/medias/sys_master/images/45584575987742.jpg" alt="" />
@@ -203,7 +205,7 @@ const HomePage = () => {
             <img src="https://assets.tatacliq.com/medias/sys_master/images/45584576708638.jpg" alt="" />
           </div>
           <div>
-            <img src="https://tata-cliq-clone.netlify.app/Images/5.png" alt="" />
+            <img style={{margin:"auto"}} src="https://tata-cliq-clone.netlify.app/Images/5.png" alt="" />
           </div>
           <div className='card' >
             <img src="https://assets.tatacliq.com/medias/sys_master/images/45435991523358.jpg" alt="" />
@@ -212,7 +214,7 @@ const HomePage = () => {
             <img src="https://assets.tatacliq.com/medias/sys_master/images/45435991719966.jpg" alt="" />
           </div>
           <div className="banner" >
-          <img src="https://assets.tatacliq.com/medias/sys_master/images/45536787398686.jpg" alt="" style={{marginTop:"40px"}}/>
+          <img style={{margin:"auto",marginTop:"40px"}} src="https://assets.tatacliq.com/medias/sys_master/images/45536787398686.jpg" alt="" />
         </div>
         <div className='child-card'>
           <img src="https://assets.tatacliq.com/medias/sys_master/images/45581162905630.jpg" alt="" />
@@ -224,8 +226,8 @@ const HomePage = () => {
           <img src="https://assets.tatacliq.com/medias/sys_master/images/45581163167774.jpg" alt="" />
           <img src="https://assets.tatacliq.com/medias/sys_master/images/45581163233310.jpg" alt="" />
         </div>
-        <div>
-          <img src="https://tata-cliq-clone.netlify.app/Images/3.png" alt="" />
+        <div >
+          <img style={{margin:"auto"}} src="https://tata-cliq-clone.netlify.app/Images/3.png" alt="" />
         </div>
         <div style={{ width: "100%"}}>
         <Slider {...settings1}>
@@ -237,9 +239,9 @@ const HomePage = () => {
         </Slider>
       </div>
       <div>
-        <img src="https://assets.tatacliq.com/medias/sys_master/images/45461314043934.jpg" alt="" />
+        <img style={{margin:"auto"}} src="https://assets.tatacliq.com/medias/sys_master/images/45461314043934.jpg" alt="" />
       </div>    
-      <div style={{  width: "90%",margin:"auto"}}>
+      <div style={{maxWidth: "100%",margin:"auto",height:"auto"}}>
         <Slider {...settings2}>
           {slider.map((item) => (
             <div key={item.id} className="slider">

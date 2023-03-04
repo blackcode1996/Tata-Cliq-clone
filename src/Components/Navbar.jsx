@@ -14,22 +14,22 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
-  Image,
 } from "@chakra-ui/react";
-import { Button, ButtonGroup } from "@chakra-ui/react";
 import { IconButton } from "@chakra-ui/react";
-import logo from "./Assests/logo.png"
+import logo from "./Assests/logo.png";
 import "./Navbar.css";
 
 export const Navbar = () => {
   const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
+
+  const[isAuth,setisAuth]=useState(false)
+
   const [current, setcurrent] = useState(false);
+
   const [text, setText] = useState("");
+
   let navigate = useNavigate();
+
   const linkstyle = {
     textDecoration: "none",
     color: "green",
@@ -52,6 +52,7 @@ export const Navbar = () => {
     "Men's Clothing",
   ];
   const toast = useToast();
+  
   function handinginputbox() {
     if (text.length > 1) {
       setcurrent(true);
@@ -70,17 +71,17 @@ export const Navbar = () => {
     document.getElementById("right_lower_box_third_input_box_id").value = targ;
   }
 
+
   if (isAuthenticated) {
-    toast({
-      title: "Account created.",
-      description: "We've created your account for you.",
-      status: "success",
-      duration: 1000,
-      isClosable: true,
-    });
+    localStorage.setItem("user", JSON.stringify(user));
+    localStorage.setItem("isAuth", true);
+  }else{
+    localStorage.setItem("isAuth", false)
   }
-  console.log(user);
-  console.log(window.location.origin);
+
+  
+
+ 
   return (
     <>
       <div id="main_navbar">
@@ -139,31 +140,17 @@ export const Navbar = () => {
               <div>
                 <h1 className="upper_boxof_navbar_h1">Gift Card</h1>
               </div>
-
-              {isAuthenticated && (
-                <div style={{ margin: "auto", marginLeft: "10px" }}>
-                  <img
-                    src={user.picture}
-                    alt="logo"
-                    style={{
-                      backgroundColor: "white",
-                      borderRadius: "50%",
-                      width: "25%",
-                    }}
-                  />
-                </div>
-              )}
               <div>
                 <Link>
                   {" "}
-                  {isAuthenticated ? (
+                  {isAuthenticated  ? (
                     <h1
                       className="upper_boxof_navbar_h1"
                       onClick={() =>
                         logout({ returnTo: window.location.origin })
                       }
                     >
-                      Loout
+                      Logout
                     </h1>
                   ) : (
                     <h1
@@ -175,13 +162,25 @@ export const Navbar = () => {
                   )}
                 </Link>
               </div>
-              <div>
-                <Link to="/admin">
-                  {" "}
-                  <h1 className="upper_boxof_navbar_h1">Admin</h1>
-                </Link>
-              </div>
-              <div></div>
+              <div style={{ margin:"auto",marginLeft:"10px"}}>
+                {isAuthenticated && (
+                  <div
+                    style={{ margin: "auto", width: "30px", height: "30px"}}
+                  >
+                    <img
+                      src={user.picture}
+                      alt="logo"
+                      style={{
+                        backgroundColor: "white",
+                        borderRadius: "50%",
+                        border: "3px solid red",
+                        width: "100%",
+                        height: "auto",
+                      }}
+                    />
+                  </div>
+                )}
+                </div>
             </div>
           </div>
           <div id="right_lower_box">

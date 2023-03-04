@@ -25,6 +25,8 @@
 #navbar_right_box {
   flex: 8;
   display: flex;
+  padding: 5px;
+  margin-left: 5px;
   flex-direction: column;
 }
 #right_upper_box {
