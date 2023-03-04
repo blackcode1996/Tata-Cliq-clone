@@ -19,7 +19,7 @@ export const Checkout = () => {
   if (paid) {
     setTimeout(() => {
       window.location.href = "/";
-    }, 1000);
+    }, 5000);
     return (
       <Box>
         <Flex

@@ -9,7 +9,7 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import axios from "axios";
-
+// getting the data from api
 const getData = async (id) => {
   try {
     const data = await axios.get(`https://wadrobe.onrender.com/men/${id}`);
@@ -18,7 +18,7 @@ const getData = async (id) => {
     console.log(err);
   }
 };
-
+// Single card Component
 const SingleCart = () => {
   const [curimg, setImg] = useState([]);
   const [data, setData] = useState({});
@@ -40,7 +40,7 @@ const SingleCart = () => {
   }, []);
 
   console.log("data", curimg[0]);
-
+  // Adding data to the cart
   const addToCart = (data) => {
     localData.push({ ...data, quantity: 1 });
     return localStorage.setItem("cartData", JSON.stringify(localData));
