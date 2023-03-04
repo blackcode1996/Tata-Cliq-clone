@@ -10,14 +10,18 @@ import {
   Tooltip,
   Text,
   GridItem,
+  Button
 } from "@chakra-ui/react";
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
-
+import "./Single.css";
 function Rating({ rating }) {
+
+
   return (
-    <Box display="flex" alignItems="center">
+    <Box width="75px" display="flex" alignItems="center">
+      
       {Array(5)
         .fill("")
         .map((_, i) => {
@@ -42,87 +46,52 @@ function Rating({ rating }) {
 //part
 export const ProductCard = ({ product }) => {
   return (
-    <GridItem
-      p={5}
-      // h={"300px"}
-      w={"100%"}
-      // display={product.images[0] ? "block" : "none"}
-      alignItems="center"
-      justifyContent="center"
-    >
-      <Box
-        h={"lg"}
-        w={"100%"}
-        bg={useColorModeValue("white", "gray.800")}
-        borderWidth="5px"
-        rounded="lg"
-        shadow="lg"
-        position="relative"
-        roundedTop="lg"
-        // border={"2px solid black"}
-      >
-        <Circle p={"7px"} position="absolute" top={2} right={2} bg="#52b155">
-          <Text color={"#fff"}>{product.brand}</Text>
-        </Circle>
-        <Link to={`/products/${product.id}`}>
-          <Image
-            w={"100%"}
-            m={"auto"}
-            h={"70%"}
-            objectFit={"contain"}
-            src={
-              product.images[0]
-                ? product.images[0]
-                : "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHNoaXJ0fGVufDB8fDB8fA%3D%3D&w=1000&q=80"
-            }
-            alt={`Picture of ${product.title}`}
-            //
-          />
-        </Link>
-        <Box p="6">
-          <Box d="flex" alignItems="baseline">
-            <Badge rounded="full" px="2" fontSize="0.8em" colorScheme="red">
-              {product.discount}
-            </Badge>
-          </Box>
-          <Flex mt="1" justifyContent="space-between" alignContent="center">
-            <Box
-              fontSize="2xl"
-              fontWeight="semibold"
-              as="h4"
-              lineHeight="tight"
-              isTruncated
-            >
-              {product.title}
-            </Box>
-            <Tooltip
-              label="Add to cart"
-              bg="white"
-              placement={"top"}
-              color={"gray.800"}
-              fontSize={"1.2em"}
-            >
-              <chakra.a href={"#"} display={"flex"}>
-                <Icon as={FiShoppingCart} h={8} w={8} alignSelf={"center"} />
-              </chakra.a>
-            </Tooltip>
-          </Flex>
-          <Text h="20px">{product.subtitle}</Text>
 
-          <Flex justifyContent="space-between" alignContent="center">
+   <div className="mainProduct_box">
+
+    <div className="Product_box">
+
+
+      <div   className="img_box">
+      <img src={
+  product.images[0]
+    ? product.images[0]
+    : "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHNoaXJ0fGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+}
+alt={`Picture of ${product.title}`} />
+      </div>
+
+      <div className="detail_box">
+           <Text mt={1} ml={2} color={"teal"}>{product.discount}</Text>
+           <Text mt={0} ml={2} >{product.title}</Text>
+           
+
+           <Flex color={"teal"} mr={16} justifyContent="space-around" alignContent="center">
             <Rating rating={product.rating} />
-            <Box fontSize="2xl" color={useColorModeValue("gray.800", "white")}>
-              <Box as="span" color={"gray.600"} fontSize="lg">
-                ₹
+            <Box  fontSize="17px" color={useColorModeValue("gray.800", "white")}>
+              <Box as="span" color={"green"} fontSize="lg">
+                ₹  {product.discounted_price}
               </Box>
-              {product.discounted_price}
+             
             </Box>
-            <Text textDecoration={"line-through"} color={"gray.600"} mt={"5px"}>
+            <Text textDecoration={"line-through"} color={"red"} mt={"5px"}>
               {product.strike_price}
             </Text>
           </Flex>
-        </Box>
-      </Box>
-    </GridItem>
+          <Link to={`/products/${product.id}`}> 
+          <Button mt={2} ml={3} width={"90%"} colorScheme={"pink"}>View</Button>
+          </Link>
+         
+      </div >
+      
+       </div>
+
+   </div>
+
+   
   );
 };
+
+
+
+

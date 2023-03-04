@@ -13,6 +13,8 @@ import {
 } from "@chakra-ui/react";
 import { AddIcon, MinusIcon } from "@chakra-ui/icons";
 import { useSearchParams } from "react-router-dom";
+import "./Single.css";
+
 
 const Sidebar = () => {
 
@@ -46,7 +48,7 @@ const Sidebar = () => {
 
 
   return (
-    <Box bg={"#fff"} maxW={300} borderRadius={"10px"}>
+    <Box className="Sidebar" border={"1px solid red"} bg={"#fff"} maxW={250} borderRadius={"10px"}>
       <FormControl>
         <FormLabel w={"100%"} display={"flex"}  bg={"#f5f5f5"} justifyContent={"space-between"}>
           <Text padding={"10px"}>Filter</Text>
