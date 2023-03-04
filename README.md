@@ -18,25 +18,12 @@ Tata Cliq is an Indian e-commerce company based in Mumbai, India. It is owned by
 ![Screenshot (84)](https://i.ibb.co/3svyTVp/Screenshot-16.png)
 
 
-
-
-
-| Team members | Github-profiles |
-| ------ | ------ |
-| Aniket Parmar | <https://github.com/aniketparmar29> | Backend |
-| Ranbir Singh | <https://github.com/sranbir392> | Footer,Cart & Checkout |
-
-| Shivam Dubey |  <https://github.com/Shivam00002> |  |
-| Aakash Mukherjee | <https://github.com/blackcode1996> | Product Page & single Product Page |
-
-
 ### Fuctionality worked on-
 
-| Team members | Functionality |
+| Team members | Functionality | Github Profile |
 | ------ | ------ |
-| Aniket Parmar | Backend |
-| Ranbir Singh | Footer,Cart & Checkout,Navbar,Products|
-| Sajan Kumar | HomePage & Login |
-| Shivam Dubey | Single Product Page & Navbar |
-| Aakash Mukherjee | Product Page |
+| Aniket Parmar | Backend | <https://github.com/aniketparmar29> |
+| Ranbir Singh | Footer,Cart & Checkout,Navbar,Products| <https://github.com/sranbir392> |
+| Shivam Dubey | Single Product Page & Navbar | <https://github.com/Shivam00002> |
+| Aakash Mukherjee | Product Page,login and signup | <https://github.com/blackcode1996> |
 
