@@ -16,12 +16,13 @@ export const Cart = () => {
   const [total, setTotal] = useState(0);
   const [data, setData] = useState([]);
   const width = useBreakpointValue({ base: "100%", lg: "60%" });
-
+  // Getting the cart data
   const getData = async () => {
     const d = JSON.parse(localStorage.getItem("cartData")) || null;
     setData(d);
     getTotal();
   };
+  // deleting the data from the cart
   const deleteData = (id) => {
     if (data.length > 0) {
       const data1 =
@@ -33,14 +34,13 @@ export const Cart = () => {
       getTotal();
     }
   };
+  // Increasing the Quantity
   const Increaseq = (id) => {
-    // console.log("increase");
-
     if (data.length > 0) {
       const r = data.map((item) => {
         return item.id == id ? { ...item, quantity: item.quantity + 1 } : item;
       });
-      // console.log(r);
+
       setData(r);
       localStorage.setItem("cartData", JSON.stringify(r));
       getTotal();
@@ -68,7 +68,6 @@ export const Cart = () => {
     });
     setTotal(t);
     localStorage.setItem("totalAmount", JSON.stringify(t));
-    // console.log(t);
   };
   useEffect(() => {
     getData();
