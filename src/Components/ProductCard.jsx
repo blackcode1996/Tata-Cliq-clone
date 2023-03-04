@@ -62,11 +62,12 @@ alt={`Picture of ${product.title}`} />
       </div>
 
       <div className="detail_box">
+        <button className="brand_btn">{product.brand}</button>
            <Text mt={1} ml={2} color={"teal"}>{product.discount}</Text>
            <Text mt={0} ml={2} >{product.title}</Text>
            
 
-           <Flex color={"teal"} mr={16} justifyContent="space-around" alignContent="center">
+           <Flex color={"teal"} mr={"19px"} justifyContent="space-around" alignContent="center">
             <Rating rating={product.rating} />
             <Box  fontSize="17px" color={useColorModeValue("gray.800", "white")}>
               <Box as="span" color={"green"} fontSize="lg">
@@ -74,7 +75,7 @@ alt={`Picture of ${product.title}`} />
               </Box>
              
             </Box>
-            <Text textDecoration={"line-through"} color={"red"} mt={"5px"}>
+            <Text  fontSize={15} textDecoration={"line-through"} color={"red"} mt={"4px"}>
               {product.strike_price}
             </Text>
           </Flex>
