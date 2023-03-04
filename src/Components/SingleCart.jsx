@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import "./Single.css";
-import { Box, Flex, Text, Button ,  useToast } from "@chakra-ui/react";
+import { Box, Flex, Text, Button, useToast } from "@chakra-ui/react";
 import ShareIcon from "@mui/icons-material/Share";
 import FavoriteBorderSharpIcon from "@mui/icons-material/FavoriteBorderSharp";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
@@ -10,63 +10,49 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import axios from "axios";
 
-
 const getData = async (id) => {
   try {
-    const data = await axios
-      .get(`https://wadrobe.onrender.com/men/${id}`)
-   return data;
- } catch (err) {
+    const data = await axios.get(`https://wadrobe.onrender.com/men/${id}`);
+    return data;
+  } catch (err) {
     console.log(err);
   }
 };
 
 const SingleCart = () => {
   const [curimg, setImg] = useState([]);
-  const [data , setData] = useState({});
-  const [localData , setlocalData] = useState([])
+  const [data, setData] = useState({});
+  const [localData, setlocalData] = useState([]);
 
   const param = useParams();
 
   const toast = useToast();
 
   useEffect(() => {
-    getData(param.id).then((res)=>{
-      setData(res.data)
-      setImg(res.data.images)
-    })
+    getData(param.id).then((res) => {
+      setData(res.data);
+      setImg(res.data.images);
+    });
 
-    const d = JSON.parse(localStorage.getItem("cartData"))||[]
-    setlocalData(d)
-    console.log("d" ,d)
-
+    const d = JSON.parse(localStorage.getItem("cartData")) || [];
+    setlocalData(d);
+    console.log("d", d);
   }, []);
 
- 
+  console.log("data", curimg[0]);
 
-  
-     
-   console.log("data" ,curimg[0])
-
-
-
-   const addToCart=(data)=>{
-
-    localData.push({...data,"qunantity":1})
-   return localStorage.setItem("cartData" , JSON.stringify(localData) )
-  
-   }
+  const addToCart = (data) => {
+    localData.push({ ...data, quantity: 1 });
+    return localStorage.setItem("cartData", JSON.stringify(localData));
+  };
 
   return (
     <>
-    
       <Box className="main">
-
         <Box className="child">
           <Flex>
             <ArrowBackIosIcon sx={{ fontSize: 60 }} className="leftarrow" />
             <Box className="imgbox">
-                
               <img src={curimg[0]} alt="" />
             </Box>
 
@@ -74,30 +60,17 @@ const SingleCart = () => {
           </Flex>
 
           <Flex className="small_img_flex">
-      
             <Box className="small_img">
-              <img
-                src={curimg[1]}
-                alt=""
-              />
+              <img src={curimg[1]} alt="" />
             </Box>
             <Box className="small_img">
-              <img
-                src={curimg[2]}
-                alt=""
-              />
+              <img src={curimg[2]} alt="" />
             </Box>
             <Box className="small_img">
-              <img
-                src={curimg[3]}
-                alt=""
-              />
+              <img src={curimg[3]} alt="" />
             </Box>
             <Box className="small_img">
-              <img
-                src={curimg[4]}
-                alt=""
-              />
+              <img src={curimg[4]} alt="" />
             </Box>
           </Flex>
         </Box>
@@ -116,7 +89,6 @@ const SingleCart = () => {
           <Flex className="right_box_h1">
             <Text fontSize={22}>{data.title}</Text>
 
-
             <Box className="logoicon">
               <ShareIcon fontSize="large" />
               <FavoriteBorderSharpIcon className="heard" />
@@ -129,17 +101,18 @@ const SingleCart = () => {
           <Text fontSize={25} className="price">
             <Flex>
               {" "}
-              ₹{data.discounted_price
-}
+              ₹{data.discounted_price}
               <Text marginTop={2} sx={{ fontSize: 17 }} marginLeft={8}>
-               {data.strike_price}
+                {data.strike_price}
               </Text>
               <Text
                 marginTop={2}
                 sx={{ fontSize: 17 }}
                 marginLeft={8}
                 color={"green"}
-              >{data.discount}</Text>
+              >
+                {data.discount}
+              </Text>
             </Flex>
             <Text fontSize={15}>inclusive off all taxes</Text>
 
@@ -159,10 +132,10 @@ const SingleCart = () => {
               backgroundColor={"green"}
             >
               {" "}
-           {data.rating}{" "}
+              {data.rating}{" "}
             </Button>{" "}
             <Text marginLeft={3} marginTop={9}>
-            {data.rating_count}
+              {data.rating_count}
             </Text>
           </Flex>
           <Text fontSize={20} marginLeft={92} marginTop={19}>
@@ -241,11 +214,7 @@ const SingleCart = () => {
           </Text>
           <Box marginTop={3} marginLeft={92}>
             {" "}
-            <img
-              style={{ width: "65px" }}
-              src={curimg[0]}
-              alt=""
-            />
+            <img style={{ width: "65px" }} src={curimg[0]} alt="" />
           </Box>
           <Text fontSize={13} marginLeft={92}>
             select Size
@@ -288,31 +257,25 @@ const SingleCart = () => {
             </Button>
 
             <button
-            className="addbtn"
+              className="addbtn"
               borderRadius={"10px"}
               color={"red"}
               marginLeft={10}
               border={"2px solid red"}
               onClick={() => {
-                addToCart(data)
+                addToCart(data);
                 toast({
-
                   title: "Added to cart SuccessFully",
-                  description: `${data.title
-                  }`,
+                  description: `${data.title}`,
                   position: "top-center",
                   status: "success",
                   duration: 1000,
                   isClosable: true,
                 });
               }}
-
             >
               ADD TO BAG
             </button>
-
-
-
           </Flex>
 
           <Box

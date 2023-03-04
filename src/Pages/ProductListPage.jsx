@@ -9,10 +9,9 @@ import { Text } from "@chakra-ui/react";
 export const ProductListPage = () => {
   return (
     <>
-      <Navbar />
       <div style={{ backgroundColor: "#ececec" }}>
         <MensTextDiv>
-          <Text fontSize='3xl'>Mens Wear</Text>
+          <Text fontSize="3xl">Mens Wear</Text>
         </MensTextDiv>
         <DivWrapper>
           <FilterWrapper>
@@ -23,7 +22,6 @@ export const ProductListPage = () => {
           </ListWrapper>
         </DivWrapper>
       </div>
-      <Footer />
     </>
   );
 };
@@ -40,8 +38,8 @@ const ListWrapper = styled.div`
   width: 80%;
 `;
 const MensTextDiv = styled.div`
-justify-content: "center";
-text-align: center;
-padding-top: 20px;
-margin-bottom: -40px;
+  justify-content: "center";
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: -40px;
 `;
