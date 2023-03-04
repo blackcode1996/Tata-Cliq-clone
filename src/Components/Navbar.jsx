@@ -9,12 +9,7 @@ import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useToast } from "@chakra-ui/react";
-import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-} from "@chakra-ui/react";
+import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import { IconButton } from "@chakra-ui/react";
 import logo from "./Assests/logo.png";
 import "./Navbar.css";
@@ -22,7 +17,7 @@ import "./Navbar.css";
 export const Navbar = () => {
   const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
 
-  const[isAuth,setisAuth]=useState(false)
+  const [isAuth, setisAuth] = useState(false);
 
   const [current, setcurrent] = useState(false);
 
@@ -52,7 +47,7 @@ export const Navbar = () => {
     "Men's Clothing",
   ];
   const toast = useToast();
-  
+
   function handinginputbox() {
     if (text.length > 1) {
       setcurrent(true);
@@ -71,17 +66,13 @@ export const Navbar = () => {
     document.getElementById("right_lower_box_third_input_box_id").value = targ;
   }
 
-
   if (isAuthenticated) {
     localStorage.setItem("user", JSON.stringify(user));
     localStorage.setItem("isAuth", true);
-  }else{
-    localStorage.setItem("isAuth", false)
+  } else {
+    localStorage.setItem("isAuth", false);
   }
 
-  
-
- 
   return (
     <>
       <div id="main_navbar">
@@ -108,18 +99,26 @@ export const Navbar = () => {
                   <span>Men's Wear</span>
                 </MenuItem>
               </Link>
-              <MenuItem minH="40px">
-                <span>Kid's Wear</span>
-              </MenuItem>
-              <MenuItem minH="40px">
-                <span>Footwear</span>
-              </MenuItem>
-              <MenuItem minH="40px">
-                <span>Electronic</span>
-              </MenuItem>
-              <MenuItem minH="40px">
-                <span>Home Essestials</span>
-              </MenuItem>
+              <Link to="/products">
+                <MenuItem minH="40px">
+                  <span>Kid's Wear</span>
+                </MenuItem>
+              </Link>
+              <Link to="/products">
+                <MenuItem minH="40px">
+                  <span>Footwear</span>
+                </MenuItem>
+              </Link>
+              <Link to="/products">
+                <MenuItem minH="40px">
+                  <span>Electronic</span>
+                </MenuItem>
+              </Link>
+              <Link to="/products">
+                <MenuItem minH="40px">
+                  <span>Home Essestials</span>
+                </MenuItem>
+              </Link>
             </MenuList>
           </Menu>
         </div>
@@ -143,7 +142,7 @@ export const Navbar = () => {
               <div>
                 <Link>
                   {" "}
-                  {isAuthenticated  ? (
+                  {isAuthenticated ? (
                     <h1
                       className="upper_boxof_navbar_h1"
                       onClick={() =>
@@ -162,10 +161,10 @@ export const Navbar = () => {
                   )}
                 </Link>
               </div>
-              <div style={{ margin:"auto",marginLeft:"10px"}}>
+              <div style={{ margin: "auto", marginLeft: "10px" }}>
                 {isAuthenticated && (
                   <div
-                    style={{ margin: "auto", width: "30px", height: "30px"}}
+                    style={{ margin: "auto", width: "30px", height: "30px" }}
                   >
                     <img
                       src={user.picture}
@@ -180,7 +179,7 @@ export const Navbar = () => {
                     />
                   </div>
                 )}
-                </div>
+              </div>
             </div>
           </div>
           <div id="right_lower_box">
@@ -205,7 +204,7 @@ export const Navbar = () => {
                   </div>
                   <div className="dropdown-menu-category">
                     <div className="a-a">
-                      <Link style={linkstyle}>
+                      <Link style={linkstyle} to="/products">
                         <a
                           className="black-giving"
                           style={{ fontWeight: "450" }}
@@ -216,7 +215,7 @@ export const Navbar = () => {
                     </div>
 
                     <div className="a-a">
-                      <Link style={linkstyle}>
+                      <Link style={linkstyle} to="/products">
                         <a
                           className="black-giving"
                           style={{ fontWeight: "450" }}
@@ -227,7 +226,7 @@ export const Navbar = () => {
                     </div>
 
                     <div className="a-a">
-                      <Link style={linkstyle}>
+                      <Link style={linkstyle} to="/products">
                         <a
                           className="black-giving"
                           style={{ fontWeight: "450" }}
@@ -238,7 +237,7 @@ export const Navbar = () => {
                     </div>
 
                     <div className="a-a">
-                      <Link style={linkstyle}>
+                      <Link style={linkstyle} to="/products">
                         <a
                           className="black-giving"
                           style={{ fontWeight: "450" }}
@@ -249,7 +248,7 @@ export const Navbar = () => {
                     </div>
 
                     <div className="a-a">
-                      <Link style={linkstyle}>
+                      <Link style={linkstyle} to="/products">
                         <a
                           className="black-giving"
                           style={{ fontWeight: "450" }}
@@ -260,7 +259,7 @@ export const Navbar = () => {
                     </div>
 
                     <div className="a-a">
-                      <Link style={linkstyle}>
+                      <Link style={linkstyle} to="/products">
                         <a
                           className="black-giving"
                           style={{ fontWeight: "450" }}
@@ -291,9 +290,11 @@ export const Navbar = () => {
                 <div className="dropdown-menu-category-brands">
                   <div className="dropdown-menu-category-brands-first">
                     <div className="dropdown-menu-category-brands-first-first h5-tag">
-                      <p id="brand_menu" style={{ fontWeight: "300" }}>
-                        Women's Wear
-                      </p>
+                      <Link to="/products">
+                        <p id="brand_menu" style={{ fontWeight: "300" }}>
+                          Women's Wear
+                        </p>
+                      </Link>
                     </div>
                     <div className="dropdown-menu-category-brands-first-second">
                       <div>
@@ -574,9 +575,11 @@ export const Navbar = () => {
 
                   <div className="dropdown-menu-category-brands-third">
                     <div className="dropdown-menu-category-brands-third-first h5-tag">
-                      <p id="brand_menu" style={{ fontWeight: "300" }}>
-                        Footwear
-                      </p>
+                      <Link to="/products">
+                        <p id="brand_menu" style={{ fontWeight: "300" }}>
+                          Footwear
+                        </p>
+                      </Link>
                     </div>
 
                     <div className="dropdown-menu-category-brands-third-second">
@@ -715,9 +718,12 @@ export const Navbar = () => {
 
                   <div className="dropdown-menu-category-brands-fourth">
                     <div className="dropdown-menu-category-brands-fourth-first h5-tag">
-                      <p id="brand_menu" style={{ fontWeight: "300" }}>
-                        Jewellery
-                      </p>
+                      <Link to="/products">
+                        {" "}
+                        <p id="brand_menu" style={{ fontWeight: "300" }}>
+                          Jewellery
+                        </p>
+                      </Link>
                     </div>
                     <div className="dropdown-menu-category-brands-fourth-second">
                       <div>
@@ -858,9 +864,11 @@ export const Navbar = () => {
 
                   <div className="dropdown-menu-category-brands-first">
                     <div className="dropdown-menu-category-brands-first-first h5-tag">
-                      <p id="brand_menu" style={{ fontWeight: "300" }}>
-                        Watches and Accesories
-                      </p>
+                      <Link to="/products">
+                        <p id="brand_menu" style={{ fontWeight: "300" }}>
+                          Watches and Accesories
+                        </p>
+                      </Link>
                     </div>
                     <div className="dropdown-menu-category-brands-first-second">
                       <div>
