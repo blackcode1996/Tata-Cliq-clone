@@ -74,7 +74,7 @@ export const Cart = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ marginTop: "150px" }}>
       <Box textAlign={"center"} m={10}>
         <Heading>Your Bag</Heading>
       </Box>
