@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { useToast } from "@chakra-ui/react";
 
 const PrivateRoute = ({ children }) => {
-  const { isAuth } = JSON.parse(localStorage.getItem("isAuth"));
+  const isAuth = localStorage.getItem("isAuth");
   const toast = useToast();
   if (isAuth) {
     return children;
