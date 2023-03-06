@@ -21,7 +21,7 @@ export const Checkout = () => {
       window.location.href = "/";
     }, 5000);
     return (
-      <Box>
+      <Box mt={20}>
         <Flex
           w={"80%"}
           justifyContent={"center"}
@@ -41,7 +41,7 @@ export const Checkout = () => {
     );
   }
   return (
-    <div style={{ backgroundColor: "black" }}>
+    <div style={{ backgroundColor: "black", marginTop: "120px" }}>
       <Box
         w={{ base: "100%", lg: "60%" }}
         m={"auto"}
