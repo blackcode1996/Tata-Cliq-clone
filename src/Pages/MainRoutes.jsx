@@ -11,8 +11,9 @@ import { Admin } from "../Admin/Pages/Admin";
 import Pagenotfound from "./Pagenotfound";
 import EditUser from "../Admin/Components/Users/EditUser";
 import EditProduct from "../Admin/Components/Product/EditProduct";
-import {Wishlist} from './Wishlist';
+import { Wishlist } from "./Wishlist";
 import SingleCart from "../Components/SingleCart";
+import PrivateRoute from "./PrivateRoute";
 export const MainRoutes = () => {
   return (
     <Routes>
@@ -21,12 +22,19 @@ export const MainRoutes = () => {
       <Route path="/products" element={<ProductListPage />}></Route>
       <Route path="/products/:id" element={<SingleCart />}></Route>
       <Route path="/checkout" element={<Checkout />}></Route>
-      <Route path="/cart" element={<Cart />}></Route>
+      <Route
+        path="/cart"
+        element={
+          <PrivateRoute>
+            <Cart />
+          </PrivateRoute>
+        }
+      ></Route>
       <Route path="*" element={<Pagenotfound />}></Route>
       <Route path="/admin" element={<Admin />}></Route>
       <Route path="/admin/edit/:id" element={<EditUser />}></Route>
       <Route path="/admin/upadte/:id" element={<EditProduct />}></Route>
-      <Route path='/wishlist' element={<Wishlist/>}></Route>
+      <Route path="/wishlist" element={<Wishlist />}></Route>
     </Routes>
   );
 };
