@@ -1,8 +1,9 @@
-Tata Cliq Clone
-
 <h2>
-Tata Cliq is an Indian e-commerce company based in Mumbai, India. It is owned by Tata UniStore Limited, of Tata Group. TataCLiQ operates in categories such as Electronics, Fashion, Footwear, and Accessories.
+Tata Cliq Clone
 </h2>
+
+Tata Cliq is an Indian e-commerce company based in Mumbai, India. It is owned by Tata UniStore Limited, of Tata Group. TataCLiQ operates in categories such as Electronics, Fashion, Footwear, and Accessories.
+
 <br>
 
 <h2>Landing Page</h2>
