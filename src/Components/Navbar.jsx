@@ -50,6 +50,8 @@ export const Navbar = () => {
   ];
   const toast = useToast();
 
+
+
   function handinginputbox() {
     if (text.length > 1) {
       setcurrent(true);
