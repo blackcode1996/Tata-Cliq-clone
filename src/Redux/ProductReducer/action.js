@@ -9,6 +9,8 @@ const getProductSuccesAction=(payload)=>{
     return {type:GET_PRODUCT_SUCCESS,payload}
 }
 
+
+
 const getProductFailureAction=()=>{
     return{type:GET_PRODUCT_FAILURE}
 }
