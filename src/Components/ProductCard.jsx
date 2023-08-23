@@ -31,6 +31,7 @@ function Rating({ rating }) {
               <BsStarFill
                 key={i}
                 style={{ marginLeft: "1" }}
+
                 color={i < rating ? "red.500" : "red.300"}
               />
             );
