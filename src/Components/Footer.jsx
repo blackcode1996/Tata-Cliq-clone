@@ -66,6 +66,7 @@ export const Footer = () => {
               <p>Ladies Watches | </p>
               <p>Trolley Bags | </p>
               <p>Handsbags for Women | </p>
+
               <p>Sling Bags for Women | </p>
               <p>Casual Shoes for Men | </p>
               <p>Boots for Men | </p>
