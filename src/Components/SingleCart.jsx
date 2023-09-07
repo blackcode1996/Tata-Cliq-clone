@@ -34,6 +34,8 @@ const SingleCart = () => {
       setImg(res.data.images);
     });
 
+
+
     const d = JSON.parse(localStorage.getItem("cartData")) || [];
     setlocalData(d);
     console.log("d", d);
