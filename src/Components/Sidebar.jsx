@@ -30,6 +30,7 @@ const Sidebar = () => {
     let newBrand=[...brand]
 
 
+
     if(newBrand.includes(e.target.value)){
       newBrand.splice(newBrand.indexOf(e.target.value),1)
     }else{
