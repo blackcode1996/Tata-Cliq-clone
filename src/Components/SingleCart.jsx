@@ -17,6 +17,7 @@ const getData = async (id) => {
   } catch (err) {
     console.log(err);
   }
+
 };
 // Single card Component
 const SingleCart = () => {
