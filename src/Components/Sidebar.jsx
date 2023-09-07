@@ -18,6 +18,7 @@ import "./Single.css";
 
 const Sidebar = () => {
 
+
   const [searchParams,setSearchParams]=useSearchParams();
 
   const inittialState=searchParams.getAll("brand")
