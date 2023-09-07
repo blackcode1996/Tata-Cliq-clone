@@ -24,6 +24,8 @@ const SingleCart = () => {
   const [data, setData] = useState({});
   const [localData, setlocalData] = useState([]);
 
+
+
   const param = useParams();
 
   const toast = useToast();
