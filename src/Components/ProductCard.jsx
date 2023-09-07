@@ -19,6 +19,8 @@ import "./Single.css";
 function Rating({ rating }) {
 
 
+
+
   return (
     <Box width="75px" display="flex" alignItems="center">
       
