@@ -4,6 +4,7 @@ import styles from "../styles/Footer.module.css";
 export const Footer = () => {
   return (
     <Box display={{ base: "none", lg: "flex" }}>
+
       <div className={styles.footer}>
         <div className={styles.footerA1}>
           <h4>Tata Trust</h4>
