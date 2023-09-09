@@ -34,6 +34,7 @@ export const Footer = () => {
             <p>Return To Store</p>
             <p>Electronics Returns Policy</p>
 
+
             <p>Contact Us</p>
             <p>Reviews Guidelines</p>
             <p>Furniture Return Policy</p>
