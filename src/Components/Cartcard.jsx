@@ -42,7 +42,8 @@ export const Cartcard = ({
 
         <Stack>
           <CardBody>
-            <Heading size="md">{title}</Heading>
+      
+      <Heading size="md">{title}</Heading>
             <Text py="2">{brand}</Text>
             <Text py="2">RS: {discounted_price}</Text>
           </CardBody>
