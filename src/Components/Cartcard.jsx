@@ -34,6 +34,8 @@ export const Cartcard = ({
       >
 
 
+
+
         <Image
           objectFit="cover"
           maxW={{ base: "100%", sm:
