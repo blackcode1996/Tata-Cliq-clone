@@ -15,6 +15,7 @@ const ProductList = () => {
 
   const location = useLocation();
 
+
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
