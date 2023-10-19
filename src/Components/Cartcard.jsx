@@ -33,9 +33,6 @@ export const Cartcard = ({
         // border={"2px solid blue"}
       >
 
-
-
-
         <Image
           objectFit="cover"
           maxW={{ base: "100%", sm:
