@@ -28,5 +28,6 @@ Tata Cliq is an Indian e-commerce company based in Mumbai, India. It is owned by
 | Aakash Mukherjee | <https://github.com/blackcode1996> |
 | Ranbir Singh | <https://github.com/sranbir392> |
 | Shivam Dubey  | <https://github.com/Shivam00002> |
+| Sajan Kumar  | <https://github.com/sajan1789> |
 | Aniket Parmar | <https://github.com/aniketparmar29> |
 
