@@ -36,6 +36,7 @@ export const Footer = () => {
 
 
 
+
             <p>Contact Us</p>
             <p>Reviews Guidelines</p>
             <p>Furniture Return Policy</p>
