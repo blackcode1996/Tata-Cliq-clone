@@ -12,6 +12,7 @@ export const Footer = () => {
           <h4>Authentic Brands</h4>
           <h4>Easy Returns</h4>
         </div>
+
         <div className={styles.footerA2}>
           <div className={styles.fA21}>
             <h4>Tata MarketPlace</h4>
