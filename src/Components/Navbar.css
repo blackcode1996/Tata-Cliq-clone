@@ -35,7 +35,7 @@
   padding: 5px;
   margin-left: 5px;
   flex-direction: column;
-}
+
 #right_upper_box {
   display: flex;
   flex: 3;
